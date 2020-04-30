@@ -5,7 +5,6 @@
   "version": "0.1.247",
   "author": "Florentin Eckl <ecklf@icloud.com>",
   "dependencies": {
-    "@material-ui/core": "^4.9.12",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1"
