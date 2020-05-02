@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const tailwindcss = require(`tailwindcss`);
+const cssnano = require(`cssnano`);
 
 module.exports = {
   plugins: [
-    tailwindcss(`./tailwind.config.js`),
     require(`autoprefixer`),
-    require(`cssnano`)({
+    cssnano({
       preset: `default`,
     }),
   ],

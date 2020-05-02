@@ -1,16 +1,16 @@
 import React, { ReactElement } from "react";
 
-import { DefaultBody } from "../components/DefaultBody";
+import { DefaultLayout } from "../components/DefaultLayout";
 
 export default function Index(): ReactElement {
   return (
-    <DefaultBody>
-      <div className="container max-w-md mx-auto mt-10">
+    <DefaultLayout>
+      <div className="container max-w-xl mx-auto mt-10">
         <div className="rounded overflow-hidden shadow-lg">
           <img className="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-            <p className="text-gray-700 text-base">
+            <div className="mb-2">The Coldest Sunset</div>
+            <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
               eaque, exercitationem praesentium nihil.
             </p>
@@ -28,6 +28,6 @@ export default function Index(): ReactElement {
           </div>
         </div>
       </div>
-    </DefaultBody>
+    </DefaultLayout>
   );
 }
