@@ -2,18 +2,16 @@ import React, { ReactElement } from "react";
 import { Link } from "gatsby";
 
 interface PostLinkProps {
-  frontmatter: {
-    path: string;
-    title: string;
-    date: string;
-  };
+  path: string;
+  title: string;
+  date: string;
 }
 
-export function PostLink({ frontmatter }: PostLinkProps): ReactElement<PostLinkProps> {
+export function PostLink({ path, title, date }: PostLinkProps): ReactElement<PostLinkProps> {
   return (
     <div>
-      <Link to={frontmatter.path}>
-        {frontmatter.title} ({frontmatter.date})
+      <Link to={path}>
+        {title} ({date})
       </Link>
     </div>
   );

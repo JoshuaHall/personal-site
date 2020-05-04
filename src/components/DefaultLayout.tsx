@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import { Helmet } from "react-helmet";
 
-import { Nav } from "./Nav/Nav";
-import { NavLink } from "./Nav/NavLink";
+import { Nav } from "./Nav";
+import { NavLink } from "./Nav";
 import { ChildrenProps } from "../childrenProps";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { Footer } from "./Footer";
@@ -24,7 +24,9 @@ export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps>
         <NavLink href="/resume/" text="Resume" isLast={false} />
         <NavLink href="/contact/" text="Contact" isLast={true} />
       </Nav>
-      {props.children}
+      <section className="section">
+        <div className="container">{props.children}</div>
+      </section>
       <Footer />
     </>
   );

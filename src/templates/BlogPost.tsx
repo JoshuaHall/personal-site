@@ -1,30 +1,37 @@
 import React, { ReactElement } from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { DefaultLayout } from "../components/DefaultLayout";
 
 interface BlogTemplateProps {
   data: {
     markdownRemark: {
       frontmatter: {
-        title: string;
         date: string;
+        title: string;
+        tags: string[];
       };
       html: string;
     };
   };
 }
 
-export default function BlogTemplate({ data }: BlogTemplateProps): ReactElement<BlogTemplateProps> {
+export default function BlogPost({ data }: BlogTemplateProps): ReactElement<BlogTemplateProps> {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
     <DefaultLayout>
-      <article className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+      <article>
+        <h1 className="title is-2">{frontmatter.title}</h1>
+        <h2 className="subtitle">{frontmatter.date}</h2>
+        <div className="tags">
+          {frontmatter.tags.map((tag) => (
+            <Link className="tag" key={tag} to={`/tags/${tag}`}>
+              {tag}
+            </Link>
+          ))}
         </div>
+        <hr />
+        <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </DefaultLayout>
   );
@@ -38,6 +45,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
       }
     }
   }

@@ -3,4 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-import "./src/css/index.css";
+import "./src/scss/index.scss";
+
+// Prism theme
+require("prismjs/themes/prism-tomorrow.css");
