@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import type { ChildrenProps } from "../childrenProps";
 
@@ -40,6 +40,9 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
       <div className={`navbar-menu${isMenuOpen ? " is-active" : ""}`} onClick={toggleMenu}>
         <NavBeginning>{props.children}</NavBeginning>
         <NavEnding>
+          <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
           <a className="navbar-item" href="https://github.com/JoshuaHall">
             <FontAwesomeIcon icon={faGithub} size="lg" />
           </a>
