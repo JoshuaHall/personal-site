@@ -4,7 +4,7 @@ module.exports = {
     title: `The Hall of Joshua`,
     description: `My blog and development portfolio`,
     author: `@JoshuaHall`,
-    siteUrl: `https://joshuahall.dev/`,
+    url: `https://joshuahall.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
