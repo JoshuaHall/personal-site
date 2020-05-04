@@ -17,6 +17,7 @@ export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps>
         <meta name="description" content={description} />
         <meta name="author" content={author} />
         <meta name="robots" content="follow" />
+        <html lang="en" />
       </Helmet>
       <Nav title={title}>
         <NavLink href="/blog/" text="Blog" isLast={false} />
