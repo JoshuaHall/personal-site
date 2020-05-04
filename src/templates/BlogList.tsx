@@ -51,8 +51,7 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
         </div>
         <div className="level-right">
           <p className="content">
-            Looking for a specific topic? Look at the list of tags I have my posts tagged with{" "}
-            <Link to="/tags">here</Link>.
+            Looking for a specific topic? Look at the <Link to="/tags">list of tags</Link>.
           </p>
         </div>
       </div>
