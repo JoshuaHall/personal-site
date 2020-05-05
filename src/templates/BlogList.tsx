@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 
 import { DefaultLayout } from '../components/DefaultLayout';
 import { PostLink } from '../components/PostLink';
+import { HeaderLevel } from '../components/TagsHeaderLevel';
 
 interface BlogListProps {
   data: {
@@ -44,19 +45,14 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
 
   return (
     <DefaultLayout>
-      <h1 className="title">Blog</h1>
-      <div className="level">
-        <div className="level-left">
-          <h2 className="subtitle">Long form thoughts on anything I feel like writing about.</h2>
-        </div>
-        <div className="level-right">
-          <p className="content">
-            Looking for a specific topic? Look at the <Link to="/tags">list of tags</Link>.
-          </p>
-        </div>
-      </div>
+      <HeaderLevel title="Blog" subtitle="Long form thoughts on anything I feel like writing about.">
+        <p className="content">
+          Looking for a specific topic? Look at the <Link to="/tags">list of tags</Link>
+        </p>
+      </HeaderLevel>
 
       <hr />
+
       {postLinks}
       {numPages >= 2 && <hr />}
       {!isFirst && (
