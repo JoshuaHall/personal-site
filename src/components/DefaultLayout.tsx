@@ -11,7 +11,7 @@ export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps>
   const { title, description, author } = useSiteMetadata();
 
   return (
-    <>
+    <React.StrictMode>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -29,6 +29,6 @@ export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps>
         <div className="container">{props.children}</div>
       </section>
       <Footer />
-    </>
+    </React.StrictMode>
   );
 }
