@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
-import { graphql, Link } from "gatsby";
-import { DefaultLayout } from "../components/DefaultLayout";
+import React, { ReactElement } from 'react';
+import { graphql, Link } from 'gatsby';
+import { DefaultLayout } from '../components/DefaultLayout';
 
 interface BlogTemplateProps {
   data: {

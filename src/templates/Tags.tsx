@@ -1,10 +1,10 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react';
 
 // Components
-import { Link, graphql } from "gatsby";
-import { DefaultLayout } from "../components/DefaultLayout";
-import { PostLink } from "../components/PostLink";
-import { TagsHeaderLevel } from "../components/TagsHeaderLevel";
+import { Link, graphql } from 'gatsby';
+import { DefaultLayout } from '../components/DefaultLayout';
+import { PostLink } from '../components/PostLink';
+import { TagsHeaderLevel } from '../components/TagsHeaderLevel';
 
 interface TagsProps {
   pageContext: {
@@ -30,7 +30,7 @@ export default function Tags({ pageContext, data }: TagsProps): ReactElement<Tag
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
 
-  const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
+  const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
 
   return (
     <DefaultLayout>

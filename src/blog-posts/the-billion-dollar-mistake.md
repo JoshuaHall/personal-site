@@ -1,8 +1,8 @@
 ---
-path: "/blog/the-billion-dollar-mistake"
-date: "2020-05-03"
-title: "The Billion Dollar Mistake"
-tags: ["programming", "elm"]
+path: '/blog/the-billion-dollar-mistake'
+date: '2020-05-03'
+title: 'The Billion Dollar Mistake'
+tags: ['programming', 'elm']
 ---
 
 Within the past few months, I have become enamored with algebraic data types (ADTs). The power that they give you to model data preciesely and safely is amazing to me. A simple example of an ADT is `Maybe` or `Option` (depending on the language you are using).

@@ -1,12 +1,12 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react';
 
 // Utilities
-import kebabCase from "lodash/kebabCase";
+import kebabCase from 'lodash/kebabCase';
 
 // Components
-import { Link, graphql } from "gatsby";
-import { DefaultLayout } from "../components/DefaultLayout";
-import { TagsHeaderLevel } from "../components/TagsHeaderLevel";
+import { Link, graphql } from 'gatsby';
+import { DefaultLayout } from '../components/DefaultLayout';
+import { TagsHeaderLevel } from '../components/TagsHeaderLevel';
 
 interface TagsPageProps {
   data: {

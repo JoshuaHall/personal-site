@@ -1,3 +1,11 @@
+// Charsets must be double quoted according to the CSS spec: https://www.w3.org/TR/CSS2/syndata.html#x57
 @charset "utf-8";
 
-@import "~bulma/bulma.sass";
+@import 'bulma';
+@import '~bulma-slider';
+
+.drum-pad {
+  border: 2px solid 'black';
+  margin: 3rem;
+  padding: 1rem;
+}

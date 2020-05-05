@@ -1,12 +1,12 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, useState } from 'react';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import type { ChildrenProps } from "../childrenProps";
+import { ChildrenProps } from '../childrenProps';
 
-import { not } from "../helperFunctions";
-import { Link } from "gatsby";
+import { not } from '../helperFunctions';
+import { Link } from 'gatsby';
 
 interface NavProps extends ChildrenProps {
   title: string;
@@ -27,7 +27,7 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
         </Link>
         <a
           role="button"
-          className={`navbar-burger${isMenuOpen ? " is-active" : ""}`}
+          className={`navbar-burger${isMenuOpen ? ' is-active' : ''}`}
           aria-label="menu"
           aria-expanded="false"
           onClick={toggleMenu}
@@ -37,7 +37,7 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div className={`navbar-menu${isMenuOpen ? " is-active" : ""}`} onClick={toggleMenu}>
+      <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu}>
         <NavBeginning>{props.children}</NavBeginning>
         <NavEnding>
           <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">

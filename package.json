@@ -10,8 +10,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "bulma": "^0.8.2",
+    "bulma-slider": "^2.0.0",
+    "drum-machine": "https://github.com/JoshuaHall/drum-machine",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-remark-prismjs": "^3.5.0",
+    "gatsby-source-graphql": "^2.5.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.14.0",
     "prismjs": "^1.20.0",
@@ -19,7 +22,8 @@
     "react-dom": "16.13.1",
     "react-helmet": "5.2.1",
     "typography": "^0.16.19",
-    "typography-theme-lincoln": "^0.16.19"
+    "typography-theme-lincoln": "^0.16.19",
+    "vfile-message": "^2.0.4"
   },
   "devDependencies": {
     "@types/react": "16.9.34",
@@ -54,6 +58,10 @@
     "gatsby-transformer-sharp": "2.4.7",
     "lint-staged": "10.1.7",
     "prettier": "^2.0.5",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-prettier": "^1.1.2",
     "typescript": "3.8.3"
   },
   "keywords": [
@@ -65,10 +73,10 @@
   "license": "MIT",
   "scripts": {
     "type-check": "tsc --noEmit",
-    "lint": "eslint . --ext ts,tsx",
+    "lint": "eslint . --ext ts,tsx,js,jsx",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx}\"",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,ts,tsx,css,scss,sass}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

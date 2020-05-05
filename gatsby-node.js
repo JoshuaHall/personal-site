@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require(`path`);
-const _ = require("lodash");
+const _ = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve(`src/templates/BlogPost.tsx`);
   const tagTemplate = path.resolve(`src/templates/Tags.tsx`);
-  const blogListTemplate = path.resolve("./src/templates/BlogList.tsx");
+  const blogListTemplate = path.resolve('./src/templates/BlogList.tsx');
 
   const result = await graphql(`
     {

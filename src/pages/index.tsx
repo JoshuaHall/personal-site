@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react';
 
-import { DefaultLayout } from "../components/DefaultLayout";
+import { DefaultLayout } from '../components/DefaultLayout';
 
 export default function Index(): ReactElement {
   return (

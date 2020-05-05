@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from 'gatsby';
 
 export interface SiteMetadata {
   title: string;
@@ -23,5 +23,5 @@ export function useSiteMetadata(): SiteMetadata {
     `,
   );
 
-  return site.siteMetadata;
+  return site.siteMetadata as SiteMetadata;
 }

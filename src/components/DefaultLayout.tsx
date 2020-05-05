@@ -1,11 +1,11 @@
-import React, { ReactElement } from "react";
-import { Helmet } from "react-helmet";
+import React, { ReactElement } from 'react';
+import { Helmet } from 'react-helmet';
 
-import { Nav } from "./Nav";
-import { NavLink } from "./Nav";
-import { ChildrenProps } from "../childrenProps";
-import { useSiteMetadata } from "../hooks/use-site-metadata";
-import { Footer } from "./Footer";
+import { Nav } from './Nav';
+import { NavLink } from './Nav';
+import { ChildrenProps } from '../childrenProps';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { Footer } from './Footer';
 
 export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps> {
   const { title, description, author } = useSiteMetadata();

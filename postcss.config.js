@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const cssnano = require(`cssnano`);
+const stylelint = require('stylelint');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 module.exports = {
   plugins: [
-    require(`autoprefixer`),
+    stylelint(),
+    autoprefixer(),
     cssnano({
-      preset: `default`,
+      preset: 'default',
     }),
   ],
 };

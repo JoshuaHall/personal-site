@@ -1,8 +1,8 @@
-import React, { ReactElement } from "react";
-import { graphql, Link } from "gatsby";
+import React, { ReactElement } from 'react';
+import { graphql, Link } from 'gatsby';
 
-import { DefaultLayout } from "../components/DefaultLayout";
-import { PostLink } from "../components/PostLink";
+import { DefaultLayout } from '../components/DefaultLayout';
+import { PostLink } from '../components/PostLink';
 
 interface BlogListProps {
   data: {
@@ -39,7 +39,7 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
 
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage: string = currentPage - 1 === 1 ? "/blog" : numberToBlogPagePath(currentPage - 1);
+  const prevPage: string = currentPage - 1 === 1 ? '/blog' : numberToBlogPagePath(currentPage - 1);
   const nextPage = numberToBlogPagePath(currentPage + 1);
 
   return (
