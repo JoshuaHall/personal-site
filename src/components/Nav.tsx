@@ -20,7 +20,7 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
   }
 
   return (
-    <nav className="navbar is-spaced is-primary" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-fixed-top is-spaced is-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           <h2 className="title">{props.title}</h2>

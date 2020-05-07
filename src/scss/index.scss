@@ -4,6 +4,29 @@
 $custom-font-family: 'Lora', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
   'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
+$personal-turquoise: #00cfc1;
+$personal-orange: #fe621d;
+
+$primary: $personal-turquoise;
+// Setup your Custom Colors
+$secondary-color: $personal-orange;
+
+@import '~bulma/sass/utilities/initial-variables.sass';
+@import '~bulma/sass/utilities/functions.sass';
+@import '~bulma/sass/utilities/derived-variables.sass';
+
+$secondary-color-invert: findColorInvert($secondary-color);
+
+// Add new color variables to the color map.
+
+$add-colors: (
+  'secondary': (
+    $secondary-color,
+    $secondary-color-invert,
+  ),
+);
+$colors: map-merge($colors, $add-colors);
+
 $family-primary: $custom-font-family;
 $family-secondary: $custom-font-family;
 $body-font-size: 1.1em;

@@ -5872,10 +5872,9 @@ elliptic@^6.0.0, elliptic@^6.5.2:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
 
-elm-canvas@^2.2.3:
+"elm-canvas@https://github.com/JoshuaHall/elm-canvas":
   version "2.2.3"
-  resolved "https://registry.yarnpkg.com/elm-canvas/-/elm-canvas-2.2.3.tgz#0f763ef698262653c5e506caf2fa87baf410bfa8"
-  integrity sha512-xwbTvvYfOz0i4jEFpVIwJSahE09QYMTc/Q29LUoVHQB4msrfzU7rAUuaSia7F+zFsllTUIp62n4roIXmuiFy3Q==
+  resolved "https://github.com/JoshuaHall/elm-canvas#4347b1501192b710f24ecb6767192f688b681a8c"
 
 elm-hot-webpack-loader@1.0.2:
   version "1.0.2"
