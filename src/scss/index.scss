@@ -6,6 +6,7 @@ $custom-font-family: 'Lora', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Rob
 
 $family-primary: $custom-font-family;
 $family-secondary: $custom-font-family;
+$body-font-size: 1.1em;
 
 @import 'bulma';
 @import '~bulma-slider';

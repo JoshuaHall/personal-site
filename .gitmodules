@@ -1,0 +1,3 @@
+[submodule "quickfrac"]
+	path = quickfrac
+	url = https://github.com/JoshuaHall/quickfrac

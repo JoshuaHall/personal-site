@@ -109,6 +109,12 @@ module.exports = {
         purgeOnly: ['src/css/index.css'],
       },
     },
+    {
+      resolve: `gatsby-plugin-elm`,
+      options: {
+        cwd: __dirname + '/quickfrac',
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
