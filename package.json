@@ -60,7 +60,7 @@
     "gatsby-plugin-typography": "^2.5.1",
     "gatsby-source-filesystem": "2.2.5",
     "gatsby-transformer-remark": "^2.8.4",
-    "gatsby-transformer-sharp": "2.4.7",
+    "gatsby-transformer-sharp": "2.5.2",
     "lint-staged": "10.1.7",
     "prettier": "^2.0.5",
     "stylelint": "^13.3.3",
