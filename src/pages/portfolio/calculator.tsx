@@ -1,10 +1,13 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { DrumMachine } from 'drum-machine';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
-interface DrumMachinePageProps {
+import { Calculator } from 'calculator';
+
+import '../../../node_modules/calculator/src/index.scss';
+
+interface CalculatorPageProps {
   data: {
     github: {
       viewer: {
@@ -17,15 +20,15 @@ interface DrumMachinePageProps {
   };
 }
 
-export default function DrumMachinePage({ data }: DrumMachinePageProps): ReactElement<DrumMachinePageProps> {
-  return <PortfolioPageLayout element={<DrumMachine />} {...data.github.viewer.repository} />;
+export default function CalculatorPage({ data }: CalculatorPageProps): ReactElement<CalculatorPageProps> {
+  return <PortfolioPageLayout element={<Calculator initialInput={'0'} />} {...data.github.viewer.repository} />;
 }
 
 export const query = graphql`
-  query DrumMachineQuery {
+  query CalculatorQuery {
     github {
       viewer {
-        repository(name: "drum-machine") {
+        repository(name: "calculator") {
           name
           description
         }

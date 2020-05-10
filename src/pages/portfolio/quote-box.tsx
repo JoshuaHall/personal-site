@@ -1,10 +1,11 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { DrumMachine } from 'drum-machine';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
-interface DrumMachinePageProps {
+import { QuoteBox } from 'quote-box';
+
+interface QuoteBoxPageProps {
   data: {
     github: {
       viewer: {
@@ -17,15 +18,15 @@ interface DrumMachinePageProps {
   };
 }
 
-export default function DrumMachinePage({ data }: DrumMachinePageProps): ReactElement<DrumMachinePageProps> {
-  return <PortfolioPageLayout element={<DrumMachine />} {...data.github.viewer.repository} />;
+export default function QuoteBoxPage({ data }: QuoteBoxPageProps): ReactElement<QuoteBoxPageProps> {
+  return <PortfolioPageLayout element={<QuoteBox />} {...data.github.viewer.repository} />;
 }
 
 export const query = graphql`
-  query DrumMachineQuery {
+  query QuoteBoxQuery {
     github {
       viewer {
-        repository(name: "drum-machine") {
+        repository(name: "quote-box") {
           name
           description
         }

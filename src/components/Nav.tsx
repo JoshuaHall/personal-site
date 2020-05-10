@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CustomIcon } from './CustomFontAwesomeIcon';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { ChildrenProps } from '../childrenProps';
@@ -41,10 +41,10 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
         <NavBeginning>{props.children}</NavBeginning>
         <NavEnding>
           <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">
-            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+            <CustomIcon icon={faLinkedin} size="lg" />
           </a>
           <a className="navbar-item" href="https://github.com/JoshuaHall">
-            <FontAwesomeIcon icon={faGithub} size="lg" />
+            <CustomIcon icon={faGithub} size="lg" />
           </a>
         </NavEnding>
       </div>

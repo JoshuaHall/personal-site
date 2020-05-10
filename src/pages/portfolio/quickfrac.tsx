@@ -1,18 +1,20 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { DefaultLayout } from '../../components/DefaultLayout';
 import ElmHandler from '../../components/ElmHandler';
 
 // Includes elm-canvas for use with quickfrac
 import 'elm-canvas';
+
 import { Elm } from '../../../quickfrac/src/Main.elm';
+import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
 interface QuickfracPageProps {
   data: {
     github: {
       viewer: {
         repository: {
+          name: string;
           description: string;
         };
       };
@@ -21,8 +23,6 @@ interface QuickfracPageProps {
 }
 
 export default function QuickfracPage({ data }: QuickfracPageProps): ReactElement<QuickfracPageProps> {
-  const respositoryDescription = data.github.viewer.repository.description;
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function addPorts(appPorts: any): void {
     appPorts.clearCanvas.subscribe(() => {
@@ -35,14 +35,7 @@ export default function QuickfracPage({ data }: QuickfracPageProps): ReactElemen
   }
 
   return (
-    <DefaultLayout>
-      <h1 className="title">quickfrac</h1>
-      <h2 className="subtitle">{respositoryDescription}</h2>
-
-      <hr />
-
-      <ElmHandler src={Elm.Main} ports={addPorts} />
-    </DefaultLayout>
+    <PortfolioPageLayout element={<ElmHandler src={Elm.Main} ports={addPorts} />} {...data.github.viewer.repository} />
   );
 }
 
@@ -51,6 +44,7 @@ export const query = graphql`
     github {
       viewer {
         repository(name: "quickfrac") {
+          name
           description
         }
       }

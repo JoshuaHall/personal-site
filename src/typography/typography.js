@@ -6,8 +6,11 @@ import lincolnTheme from 'typography-theme-lincoln';
 
 lincolnTheme.overrideThemeStyles = () => ({
   a: {
-    'text-shadow': 'none',
-    'background-image': 'none',
+    textShadow: 'none',
+    backgroundImage: 'none',
+  },
+  blockquote: {
+    borderLeft: 'none',
   },
 });
 
