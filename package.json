@@ -65,7 +65,7 @@
     "gatsby-source-filesystem": "2.2.5",
     "gatsby-transformer-remark": "^2.8.4",
     "gatsby-transformer-sharp": "2.5.2",
-    "lint-staged": "10.1.7",
+    "lint-staged": "10.2.2",
     "prettier": "^2.0.5",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",
