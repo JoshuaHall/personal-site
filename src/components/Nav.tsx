@@ -40,10 +40,14 @@ export function Nav({ title, children }: NavProps): ReactElement<NavProps> {
       <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu} role="button">
         <NavBeginning>{children}</NavBeginning>
         <NavEnding>
-          <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">
+          <a
+            className="navbar-item"
+            href="https://www.linkedin.com/in/joshuadouglashall/"
+            aria-label="LinkedIn link with icon"
+          >
             <CustomIcon icon={faLinkedin} size="lg" />
           </a>
-          <a className="navbar-item" href="https://github.com/JoshuaHall">
+          <a className="navbar-item" href="https://github.com/JoshuaHall" aria-label="GitHub link with icon">
             <CustomIcon icon={faGithub} size="lg" />
           </a>
         </NavEnding>

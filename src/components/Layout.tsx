@@ -1,12 +1,14 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
+
 import { Nav } from './Nav';
 import { NavLink } from './Nav';
-import { ChildrenProps } from '../childrenProps';
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Footer } from './Footer';
 import { SEO } from './SEO';
+
+import { ChildrenProps } from '../childrenProps';
 
 export interface LayoutProps extends ChildrenProps {
   title?: string;
