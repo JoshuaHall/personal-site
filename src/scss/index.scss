@@ -1,9 +1,7 @@
 // Charsets must be double quoted according to the CSS spec: https://www.w3.org/TR/CSS2/syndata.html#x57
 @charset "utf-8";
 
-$custom-font-family: 'Lora', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
-  'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-
+// COLORS
 $personal-turquoise: #00cfc1;
 $personal-orange: #fe621d;
 
@@ -18,7 +16,6 @@ $secondary-color: $personal-orange;
 $secondary-color-invert: findColorInvert($secondary-color);
 
 // Add new color variables to the color map.
-
 $add-colors: (
   'secondary': (
     $secondary-color,
@@ -27,8 +24,9 @@ $add-colors: (
 );
 $colors: map-merge($colors, $add-colors);
 
-$family-primary: $custom-font-family;
-$family-secondary: $custom-font-family;
+// TYPOGRAPHY
+$default-font-family: $family-primary;
+$family-primary: 'Lora', $family-primary;
 $body-font-size: 1.1em;
 
 @import 'bulma';
@@ -43,4 +41,8 @@ $body-font-size: 1.1em;
 
 .level-align-start {
   align-items: start;
+}
+
+.bulma-fonts * {
+  font-family: $default-font-family;
 }

@@ -32,13 +32,14 @@ interface PortfolioPageProps {
         quoteBox: GithubRepo;
         markdownPreviewer: GithubRepo;
         calculator: GithubRepo;
+        pomodoroClock: GithubRepo;
       };
     };
   };
 }
 
 export default function Portfolio({ data }: PortfolioPageProps): ReactElement<PortfolioPageProps> {
-  const { drumMachine, quickfrac, quoteBox, markdownPreviewer, calculator } = data.github.viewer;
+  const { drumMachine, quickfrac, quoteBox, markdownPreviewer, calculator, pomodoroClock } = data.github.viewer;
 
   return (
     <DefaultLayout>
@@ -58,6 +59,9 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
         </div>
         <div className="tile is-parent">
           <PortfolioTileLink url="/portfolio/calculator" {...calculator} />
+        </div>
+        <div className="tile is-parent">
+          <PortfolioTileLink url="/portfolio/pomodoro-clock" {...pomodoroClock} />
         </div>
       </div>
     </DefaultLayout>
@@ -85,6 +89,10 @@ export const query = graphql`
           description
         }
         calculator: repository(name: "calculator") {
+          name
+          description
+        }
+        pomodoroClock: repository(name: "pomodoro-clock") {
           name
           description
         }
