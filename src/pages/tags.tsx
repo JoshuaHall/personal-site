@@ -6,7 +6,7 @@ import kebabCase from 'lodash/kebabCase';
 // Components
 import { Link, graphql } from 'gatsby';
 import { DefaultLayout } from '../components/DefaultLayout';
-import { TagsHeaderLevel } from '../components/TagsHeaderLevel';
+import { TagsHeaderColumns } from '../components/HeaderColumns';
 
 interface TagsPageProps {
   data: {
@@ -26,7 +26,7 @@ export default function TagsPage({
 }: TagsPageProps): ReactElement<TagsPageProps> {
   return (
     <DefaultLayout title="Tags">
-      <TagsHeaderLevel title="Tags" />
+      <TagsHeaderColumns title="Tags" />
 
       <hr />
 

@@ -37,7 +37,7 @@ export function Nav({ title, children }: NavProps): ReactElement<NavProps> {
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu}>
+      <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu} role="button">
         <NavBeginning>{children}</NavBeginning>
         <NavEnding>
           <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">

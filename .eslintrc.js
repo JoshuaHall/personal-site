@@ -26,5 +26,8 @@ module.exports = {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    'jsx-a11y/interactive-supports-focus': 'warn',
+    'jsx-a11y/anchor-is-valid': 'warn',
   },
 };

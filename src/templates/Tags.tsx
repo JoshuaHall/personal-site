@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import { Link, graphql } from 'gatsby';
 import { DefaultLayout } from '../components/DefaultLayout';
 import { PostLink } from '../components/PostLink';
-import { TagsHeaderLevel } from '../components/TagsHeaderLevel';
+import { TagsHeaderColumns } from '../components/HeaderColumns';
 
 interface TagsProps {
   pageContext: {
@@ -34,7 +34,7 @@ export default function Tags({ pageContext, data }: TagsProps): ReactElement<Tag
 
   return (
     <DefaultLayout title={`${tag} tag`}>
-      <TagsHeaderLevel title={tagHeader} />
+      <TagsHeaderColumns title={tagHeader} />
 
       <hr />
 
