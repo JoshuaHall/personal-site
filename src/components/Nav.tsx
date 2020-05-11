@@ -12,7 +12,7 @@ interface NavProps extends ChildrenProps {
   title: string;
 }
 
-export function Nav(props: NavProps): ReactElement<NavProps> {
+export function Nav({ title, children }: NavProps): ReactElement<NavProps> {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu(): void {
@@ -23,7 +23,7 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
     <nav className="navbar is-fixed-top is-spaced is-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
-          <h2 className="title">{props.title}</h2>
+          <h2 className="title">{title}</h2>
         </Link>
         <a
           role="button"
@@ -38,7 +38,7 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
         </a>
       </div>
       <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu}>
-        <NavBeginning>{props.children}</NavBeginning>
+        <NavBeginning>{children}</NavBeginning>
         <NavEnding>
           <a className="navbar-item" href="https://www.linkedin.com/in/joshuadouglashall/">
             <CustomIcon icon={faLinkedin} size="lg" />
@@ -52,24 +52,23 @@ export function Nav(props: NavProps): ReactElement<NavProps> {
   );
 }
 
-export function NavBeginning(props: ChildrenProps): ReactElement<ChildrenProps> {
-  return <div className="navbar-start">{props.children}</div>;
+export function NavBeginning({ children }: ChildrenProps): ReactElement<ChildrenProps> {
+  return <div className="navbar-start">{children}</div>;
 }
 
-export function NavEnding(props: ChildrenProps): ReactElement<ChildrenProps> {
-  return <div className="navbar-end">{props.children}</div>;
+export function NavEnding({ children }: ChildrenProps): ReactElement<ChildrenProps> {
+  return <div className="navbar-end">{children}</div>;
 }
 
 interface NavLinkProps {
   href: string;
   text: string;
-  isLast: boolean;
 }
 
-export function NavLink(props: NavLinkProps): ReactElement<NavLinkProps> {
+export function NavLink({ href, text }: NavLinkProps): ReactElement<NavLinkProps> {
   return (
-    <Link to={props.href} className="navbar-item">
-      <h4>{props.text}</h4>
+    <Link to={href} className="navbar-item">
+      <h4>{text}</h4>
     </Link>
   );
 }

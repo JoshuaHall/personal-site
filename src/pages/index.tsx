@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout';
 
 export default function Index(): ReactElement {
   return (
-    <Layout>
+    <Layout title="Home">
       <section className="hero is-medium is-secondary">
         <div className="hero-body">
           <div className="container">

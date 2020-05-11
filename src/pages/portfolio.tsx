@@ -42,7 +42,7 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
   const { drumMachine, quickfrac, quoteBox, markdownPreviewer, calculator, pomodoroClock } = data.github.viewer;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Portfolio">
       <h1 className="title">Portfolio</h1>
       <h2 className="subtitle">A display of some of my work</h2>
 

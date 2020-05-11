@@ -25,9 +25,11 @@ export default function TagsPage({
   },
 }: TagsPageProps): ReactElement<TagsPageProps> {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Tags">
       <TagsHeaderLevel title="Tags" />
+
       <hr />
+
       <ul>
         {group.map((tag) => (
           <li key={tag.fieldValue}>

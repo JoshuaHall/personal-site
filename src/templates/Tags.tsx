@@ -33,9 +33,11 @@ export default function Tags({ pageContext, data }: TagsProps): ReactElement<Tag
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout title={`${tag} tag`}>
       <TagsHeaderLevel title={tagHeader} />
+
       <hr />
+
       <ul className="content">
         {edges.map(({ node }, i) => (
           <li key={i}>
@@ -43,7 +45,9 @@ export default function Tags({ pageContext, data }: TagsProps): ReactElement<Tag
           </li>
         ))}
       </ul>
+
       <hr />
+
       <Link to="/tags">All tags</Link>
     </DefaultLayout>
   );

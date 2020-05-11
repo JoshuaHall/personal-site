@@ -6,26 +6,30 @@ import { NavLink } from './Nav';
 import { ChildrenProps } from '../childrenProps';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { Footer } from './Footer';
+import { SEO } from './SEO';
 
-export function Layout(props: ChildrenProps): ReactElement<ChildrenProps> {
-  const { title, description, author } = useSiteMetadata();
+export interface LayoutProps extends ChildrenProps {
+  title?: string;
+  description?: string;
+}
+
+export function Layout({ children, title, description }: LayoutProps): ReactElement<LayoutProps> {
+  const { title: siteTitle, author, description: siteDescription } = useSiteMetadata();
 
   return (
     <React.StrictMode>
       <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="author" content={author} />
-        <meta name="robots" content="follow" />
         <html lang="en" className="has-navbar-fixed-top" />
+        <title>{title}</title>
       </Helmet>
-      <Nav title={title}>
-        <NavLink href="/blog/" text="Blog" isLast={false} />
-        <NavLink href="/portfolio/" text="Portfolio" isLast={false} />
-        <NavLink href="/resume/" text="Resume" isLast={false} />
-        <NavLink href="/contact/" text="Contact" isLast={true} />
+      <SEO author={author} description={description || siteDescription} />
+      <Nav title={siteTitle}>
+        <NavLink href="/blog/" text="Blog" />
+        <NavLink href="/portfolio/" text="Portfolio" />
+        <NavLink href="/resume/" text="Resume" />
+        <NavLink href="/contact/" text="Contact" />
       </Nav>
-      {props.children}
+      {children}
       <Footer />
     </React.StrictMode>
   );

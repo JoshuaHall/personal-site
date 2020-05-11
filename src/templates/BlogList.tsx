@@ -44,7 +44,7 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
   const nextPage = numberToBlogPagePath(currentPage + 1);
 
   return (
-    <DefaultLayout>
+    <DefaultLayout title="Blog">
       <HeaderLevel title="Blog" subtitle="Long form thoughts on anything I feel like writing about.">
         <p className="content">
           Looking for a specific topic? Look at the <Link to="/tags">list of tags</Link>

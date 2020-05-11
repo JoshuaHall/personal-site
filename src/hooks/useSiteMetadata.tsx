@@ -1,10 +1,17 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
+export interface MetaItem {
+  name: string;
+  content: string;
+}
+
 export interface SiteMetadata {
   title: string;
   description: string;
   url: string;
   author: string;
+  keywords: string[];
+  image: string;
 }
 
 export function useSiteMetadata(): SiteMetadata {
@@ -17,6 +24,8 @@ export function useSiteMetadata(): SiteMetadata {
             description
             url
             author
+            keywords
+            image
           }
         }
       }

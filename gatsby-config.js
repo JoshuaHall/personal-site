@@ -8,6 +8,9 @@ module.exports = {
     description: `My blog and development portfolio`,
     author: `@JoshuaHall`,
     url: `https://joshuahall.dev`,
+    keywords: ['portfolio', 'blog', 'joshua', 'hall'],
+    image: '',
+    meta: [],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

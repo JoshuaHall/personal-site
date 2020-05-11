@@ -1,13 +1,12 @@
 import React, { ReactElement } from 'react';
 
-import { Layout } from './Layout';
-import { ChildrenProps } from '../childrenProps';
+import { Layout, LayoutProps } from './Layout';
 
-export function DefaultLayout(props: ChildrenProps): ReactElement<ChildrenProps> {
+export function DefaultLayout({ children, title, description }: LayoutProps): ReactElement<LayoutProps> {
   return (
-    <Layout>
+    <Layout description={description} title={title}>
       <section className="section">
-        <div className="container">{props.children}</div>
+        <div className="container">{children}</div>
       </section>
     </Layout>
   );
