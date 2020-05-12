@@ -2077,7 +2077,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-dom@16.9.8", "@types/react-dom@^16.9.0", "@types/react-dom@^16.9.7":
+"@types/react-dom@16.9.8", "@types/react-dom@^16.9.0", "@types/react-dom@^16.9.7", "@types/react-dom@^16.9.8":
   version "16.9.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
   integrity sha512-ykkPQ+5nFknnlU6lDd947WbQ6TE3NNzbQAkInC2EKY1qeYdTKp7onFusmYZb+ityzx2YviqT6BXSu+LyWWJwcA==
@@ -2091,10 +2091,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.0", "@types/react@^16.9.34":
-  version "16.9.34"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.34.tgz#f7d5e331c468f53affed17a8a4d488cd44ea9349"
-  integrity sha512-8AJlYMOfPe1KGLKyHpflCg5z46n0b5DbRfqDksxBLBTUpB75ypDBAO9eCUcjNwE6LCUslwTz00yyG/X9gaVtow==
+"@types/react@*", "@types/react@^16.9.0", "@types/react@^16.9.34", "@types/react@^16.9.35":
+  version "16.9.35"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.35.tgz#a0830d172e8aadd9bd41709ba2281a3124bbd368"
+  integrity sha512-q0n0SsWcGc8nDqH2GJfWQWUOmZSJhXV64CjVN5SvcNti3TdEaA3AH0D8DwNmMdzjMAC/78tB8nAZIlV8yTz+zQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -14069,16 +14069,16 @@ quick-lru@^4.0.1:
 
 "quote-box@https://github.com/JoshuaHall/quote-box":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/quote-box#e33472cae28ec8d097932835dadf13d47e341fef"
+  uid b55db391001a272cc6775e14bf1837d9273684b9
+  resolved "https://github.com/JoshuaHall/quote-box#b55db391001a272cc6775e14bf1837d9273684b9"
   dependencies:
-    "@types/node" "^12.0.0"
-    "@types/react" "^16.9.0"
-    "@types/react-dom" "^16.9.0"
+    "@types/react" "^16.9.35"
+    "@types/react-dom" "^16.9.8"
     bulma "^0.8.2"
     react "^16.13.1"
     react-dom "^16.13.1"
     react-scripts "3.4.1"
-    typescript "~3.7.2"
+    typescript "~3.8.3"
 
 raf@^3.4.1:
   version "3.4.1"
