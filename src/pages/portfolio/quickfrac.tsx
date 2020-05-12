@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import ElmHandler from '../../components/ElmHandler';
 
-// Includes elm-canvas for use with quickfrac
+// Includes elm-canvas for use with elm-canvas and quickfrac
 import 'elm-canvas';
 
 import { Elm } from '../../../quickfrac/src/Main.elm';

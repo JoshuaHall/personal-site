@@ -5,7 +5,7 @@ import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontaw
 export function CustomIcon(props: FontAwesomeIconProps): ReactElement<FontAwesomeIconProps> {
   return (
     <span className="icon">
-      <FontAwesomeIcon {...props}></FontAwesomeIcon>
+      <FontAwesomeIcon {...props} />
     </span>
   );
 }

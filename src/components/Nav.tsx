@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 
-import { CustomIcon } from './CustomFontAwesomeIcon';
+import { CustomIcon } from './CustomIcon';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { ChildrenProps } from '../childrenProps';
