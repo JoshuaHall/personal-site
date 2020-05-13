@@ -50,7 +50,7 @@
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "2.5.1",
     "gatsby": "^2.21.22",
     "gatsby-cli": "^2.12.19",
@@ -60,7 +60,7 @@
     "gatsby-plugin-postcss": "2.2.4",
     "gatsby-plugin-purgecss": "5.0.0",
     "gatsby-plugin-react-helmet": "3.3.1",
-    "gatsby-plugin-sharp": "2.5.7",
+    "gatsby-plugin-sharp": "2.6.3",
     "gatsby-plugin-typescript": "2.4.2",
     "gatsby-plugin-typography": "^2.5.1",
     "gatsby-source-filesystem": "2.2.5",
@@ -71,7 +71,7 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-prettier": "^1.1.2",
-    "typescript": "3.8.3"
+    "typescript": "3.9.2"
   },
   "keywords": [
     "gatsby",
