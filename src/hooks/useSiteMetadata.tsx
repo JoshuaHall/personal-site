@@ -12,6 +12,11 @@ export interface SiteMetadata {
   author: string;
   keywords: string[];
   image: string;
+  myEmail: string;
+  myPhone: string;
+  myFormattedPhone: string;
+  myLinkedIn: string;
+  myGitHub: string;
 }
 
 export function useSiteMetadata(): SiteMetadata {
@@ -26,6 +31,11 @@ export function useSiteMetadata(): SiteMetadata {
             author
             keywords
             image
+            myEmail
+            myPhone
+            myFormattedPhone
+            myLinkedIn
+            myGitHub
           }
         }
       }

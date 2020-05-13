@@ -4,13 +4,17 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `The Hall of Joshua`,
+    title: `Joshua Hall`,
     description: `My blog and development portfolio`,
     author: `@JoshuaHall`,
     url: `https://joshuahall.dev`,
     keywords: ['portfolio', 'blog', 'joshua', 'hall'],
     image: '',
-    meta: [],
+    myEmail: 'joshuahallmail@gmail.com',
+    myPhone: '8166942490',
+    myFormattedPhone: '(816) 694-2490',
+    myLinkedIn: 'https://www.linkedin.com/in/joshuadouglashall/',
+    myGitHub: 'https://github.com/JoshuaHall',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -98,27 +102,13 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/typography/typography`,
-      },
-    },
-    `gatsby-plugin-sass`,
-    'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        purgeOnly: ['src/css/index.css'],
-      },
-    },
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-elm`,
       options: {
         cwd: __dirname + '/quickfrac',
       },
     },
-    `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -133,5 +123,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/typography/typography`,
+      },
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-purgecss`,
   ],
 };

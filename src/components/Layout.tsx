@@ -16,7 +16,7 @@ export interface LayoutProps extends ChildrenProps {
 }
 
 export function Layout({ children, title, description }: LayoutProps): ReactElement<LayoutProps> {
-  const { title: siteTitle, author, description: siteDescription } = useSiteMetadata();
+  const { title: siteTitle, author, description: siteDescription, myLinkedIn, myGitHub } = useSiteMetadata();
 
   return (
     <React.StrictMode>
@@ -25,7 +25,7 @@ export function Layout({ children, title, description }: LayoutProps): ReactElem
         <title>{title}</title>
       </Helmet>
       <SEO author={author} description={description || siteDescription} />
-      <Nav title={siteTitle}>
+      <Nav title={siteTitle} gitHubUrl={myGitHub} linkedInUrl={myLinkedIn}>
         <NavLink href="/blog/" text="Blog" />
         <NavLink href="/portfolio/" text="Portfolio" />
         <NavLink href="/resume/" text="Resume" />

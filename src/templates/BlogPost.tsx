@@ -25,12 +25,14 @@ export default function BlogPost({ data }: BlogTemplateProps): ReactElement<Blog
         <h2 className="subtitle">{frontmatter.date}</h2>
         <div className="tags">
           {frontmatter.tags.map((tag) => (
-            <Link className="tag" key={tag} to={`/tags/${tag}`}>
+            <Link className="tag is-medium is-rounded" key={tag} to={`/tags/${tag}`}>
               {tag}
             </Link>
           ))}
         </div>
+
         <hr />
+
         <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </DefaultLayout>

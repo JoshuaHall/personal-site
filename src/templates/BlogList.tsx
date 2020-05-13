@@ -5,6 +5,8 @@ import { DefaultLayout } from '../components/DefaultLayout';
 import { PostLink } from '../components/PostLink';
 import { HeaderColumns } from '../components/HeaderColumns';
 
+import { range } from 'lodash';
+
 interface BlogListProps {
   data: {
     allMarkdownRemark: {
@@ -43,6 +45,61 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
   const prevPage: string = currentPage - 1 === 1 ? '/blog' : numberToBlogPagePath(currentPage - 1);
   const nextPage = numberToBlogPagePath(currentPage + 1);
 
+  const previousButton = (
+    <Link to={prevPage} rel="prev" className="pagination-previous">
+      ← Previous Page
+    </Link>
+  );
+
+  const disabledPreviousButton = (
+    <button className="pagination-previous" disabled>
+      ← Previous Page
+    </button>
+  );
+
+  const nextButton = (
+    <Link to={nextPage} rel="next" className="pagination-next">
+      Next Page →
+    </Link>
+  );
+
+  const disabledNextButton = (
+    <button className="pagination-next" disabled>
+      Next Page →
+    </button>
+  );
+
+  const pagination = (
+    <>
+      <hr />
+
+      <nav className="pagination is-centered" role="navigation" aria-label="pagination">
+        {isFirst ? disabledPreviousButton : previousButton}
+
+        {isLast ? disabledNextButton : nextButton}
+
+        <ul className="pagination-list">
+          {range(1, numPages + 1).map((pageNum) => {
+            const blogLinkEnd = pageNum !== 1 ? `/${pageNum}` : '';
+
+            return (
+              <li key={`pagination-number${pageNum}`}>
+                <Link
+                  to={`/blog${blogLinkEnd}`}
+                  className={`pagination-link${pageNum === currentPage ? ' is-current' : ''}`}
+                >
+                  {pageNum}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </>
+  );
+
+  const shouldShowPagination = numPages >= 2;
+
   return (
     <DefaultLayout title="Blog">
       <HeaderColumns title="Blog" subtitle="Long form thoughts on anything I feel like writing about.">
@@ -54,17 +111,8 @@ export default function BlogList({ data, pageContext }: BlogListProps): ReactEle
       <hr />
 
       {postLinks}
-      {numPages >= 2 && <hr />}
-      {!isFirst && (
-        <Link to={prevPage} rel="prev" className="button is-primary">
-          ← Previous Page
-        </Link>
-      )}
-      {!isLast && (
-        <Link to={nextPage} rel="next" className="button is-primary">
-          Next Page →
-        </Link>
-      )}
+
+      {shouldShowPagination && pagination}
     </DefaultLayout>
   );
 }

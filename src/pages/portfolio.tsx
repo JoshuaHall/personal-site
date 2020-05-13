@@ -12,13 +12,15 @@ interface PortfolioTileLinkProps extends GithubRepo {
   url: string;
 }
 
-function PortfolioTileLink({ name, description, url }: PortfolioTileLinkProps): ReactElement<PortfolioTileLinkProps> {
+function PortfolioTileLink({ url, name, description }: PortfolioTileLinkProps): ReactElement<PortfolioTileLinkProps> {
   return (
-    <div className="tile is-child box">
-      <Link to={url}>
-        <p className="title">{name}</p>
-      </Link>
-      <p className="content">{description}</p>
+    <div className="columns">
+      <div className="column">
+        <Link to={url}>
+          <h3 className="title">{name}</h3>
+        </Link>
+        <p className="content">{description}</p>
+      </div>
     </div>
   );
 }
@@ -43,27 +45,22 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
 
   return (
     <DefaultLayout title="Portfolio">
-      <h1 className="title">Portfolio</h1>
-      <h2 className="subtitle">A display of some of my work</h2>
+      <h2 className="title is-2">Portfolio</h2>
+      <h4 className="subtitle">A display of some of my work</h4>
 
-      <div className="tile is-ancestor">
-        <div className="tile is-4 is-vertical is-parent">
-          <PortfolioTileLink url="/portfolio/drum-machine" {...drumMachine} />
-          <PortfolioTileLink url="/portfolio/quote-box" {...quoteBox} />
-        </div>
-        <div className="tile is-parent">
-          <PortfolioTileLink url="/portfolio/quickfrac" {...quickfrac} />
-        </div>
-        <div className="tile is-parent">
-          <PortfolioTileLink url="/portfolio/markdown-previewer" {...markdownPreviewer} />
-        </div>
-        <div className="tile is-parent">
-          <PortfolioTileLink url="/portfolio/calculator" {...calculator} />
-        </div>
-        <div className="tile is-parent">
-          <PortfolioTileLink url="/portfolio/pomodoro-clock" {...pomodoroClock} />
-        </div>
-      </div>
+      <hr />
+
+      <h3 className="title">Personal Projects:</h3>
+      <PortfolioTileLink url="/portfolio/quickfrac" {...quickfrac} />
+
+      <hr />
+
+      <h3 className="title">FreeCodeCamp.org Front End Libraries Certification Projects:</h3>
+      <PortfolioTileLink url="/portfolio/quote-box" {...quoteBox} />
+      <PortfolioTileLink url="/portfolio/markdown-previewer" {...markdownPreviewer} />
+      <PortfolioTileLink url="/portfolio/drum-machine" {...drumMachine} />
+      <PortfolioTileLink url="/portfolio/calculator" {...calculator} />
+      <PortfolioTileLink url="/portfolio/pomodoro-clock" {...pomodoroClock} />
     </DefaultLayout>
   );
 }
@@ -72,10 +69,6 @@ export const query = graphql`
   query PortfolioQuery {
     github {
       viewer {
-        drumMachine: repository(name: "drum-machine") {
-          name
-          description
-        }
         quickfrac: repository(name: "quickfrac") {
           name
           description
@@ -85,6 +78,10 @@ export const query = graphql`
           description
         }
         markdownPreviewer: repository(name: "markdown-previewer") {
+          name
+          description
+        }
+        drumMachine: repository(name: "drum-machine") {
           name
           description
         }

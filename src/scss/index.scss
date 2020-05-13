@@ -48,5 +48,9 @@ $body-font-size: 1.1em;
 }
 
 .icon-with-text {
-  vertical-align: middle;
+  transform: translateY(+10%);
+}
+
+.resume-job:not(:last-child) {
+  margin-bottom: 1.5rem;
 }

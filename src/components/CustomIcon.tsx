@@ -2,9 +2,13 @@ import React, { ReactElement } from 'react';
 
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 
-export function CustomIcon(props: FontAwesomeIconProps): ReactElement<FontAwesomeIconProps> {
+interface CustomIconProps extends FontAwesomeIconProps {
+  alignWithText?: boolean;
+}
+
+export function CustomIcon(props: CustomIconProps): ReactElement<CustomIconProps> {
   return (
-    <span className="icon">
+    <span className={`icon${props.alignWithText ? ' icon-with-text' : ''}`}>
       <FontAwesomeIcon {...props} />
     </span>
   );

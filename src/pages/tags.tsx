@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 // Utilities
-import kebabCase from 'lodash/kebabCase';
+import { kebabCase } from 'lodash';
 
 // Components
 import { Link, graphql } from 'gatsby';
