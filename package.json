@@ -13,7 +13,7 @@
     "bulma-slider": "^2.0.0",
     "calculator": "https://github.com/JoshuaHall/calculator.git",
     "dompurify": "^2.0.11",
-    "drum-machine": "https://github.com/JoshuaHall/drum-machine",
+    "drum-machine": "https://github.com/JoshuaHall/drum-machine.git",
     "elm-canvas": "https://github.com/JoshuaHall/elm-canvas",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-remark-prismjs": "^3.5.0",
