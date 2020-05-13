@@ -2033,11 +2033,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.5.tgz#96ec3b0afafd64a4ccea9107b75bf8489f0e5765"
   integrity sha512-3ySmiBYJPqgjiHA7oEaIo2Rzz0HrOZ7yrNO5HWyaE5q0lQ3BppDZ3N53Miz8bw2I7gh1/zir2MGVZBvpb1zq9g==
 
-"@types/node@^12.0.0":
-  version "12.12.38"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.38.tgz#58841a382f231ad005dbb935c36d44aa1118a26b"
-  integrity sha512-75eLjX0pFuTcUXnnWmALMzzkYorjND0ezNEycaKesbUBg9eGZp4GHPuDmkRc4mQQvIpe29zrzATNRA6hkYqwmA==
-
 "@types/node@^8.5.7":
   version "8.10.60"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.60.tgz#73eb4d1e1c8aa5dc724363b57db019cf28863ef7"
@@ -5786,19 +5781,19 @@ download@^7.1.0:
 
 "drum-machine@https://github.com/JoshuaHall/drum-machine":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/drum-machine#e0eec37f9a7c98b14eee05ba75310c8dec9a9f89"
+  uid "361943cfc7ad488cdf85008fe7f6c791b755abf8"
+  resolved "https://github.com/JoshuaHall/drum-machine#361943cfc7ad488cdf85008fe7f6c791b755abf8"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
-    "@types/node" "^12.0.0"
-    "@types/react" "^16.9.0"
-    "@types/react-dom" "^16.9.0"
+    "@types/react" "^16.9.35"
+    "@types/react-dom" "^16.9.8"
     bulma "^0.8.2"
     bulma-slider "^2.0.0"
-    node-sass "^4.14.0"
+    node-sass "^4.14.1"
     react "^16.13.1"
     react-dom "^16.13.1"
     react-scripts "3.4.1"
-    typescript "~3.7.2"
+    typescript "~3.9.2"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -17014,15 +17009,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.2:
+typescript@3.9.2, typescript@~3.9.2:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.2.tgz#64e9c8e9be6ea583c54607677dd4680a1cf35db9"
   integrity sha512-q2ktq4n/uLuNNShyayit+DTobV2ApPEo/6so68JaD5ojvc/6GClBipedB9zNWYxRSAlZXAe405Rlijzl6qDiSw==
-
-typescript@~3.7.2:
-  version "3.7.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
-  integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
 
 typescript@~3.8.3:
   version "3.8.3"
