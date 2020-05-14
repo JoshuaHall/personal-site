@@ -3893,9 +3893,9 @@ cacheable-request@^6.0.0:
     normalize-url "^4.1.0"
     responselike "^1.0.2"
 
-"calculator@https://github.com/JoshuaHall/calculator.git":
+"calculator@https://github.com/JoshuaHall/calculator":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/calculator.git#9b4fe901bc469a3a5e987bcd0ecc986ea9784bb7"
+  resolved "https://github.com/JoshuaHall/calculator#9b4fe901bc469a3a5e987bcd0ecc986ea9784bb7"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
     "@types/react" "^16.9.35"
@@ -5774,9 +5774,9 @@ download@^7.1.0:
     p-event "^2.1.0"
     pify "^3.0.0"
 
-"drum-machine@https://github.com/JoshuaHall/drum-machine.git":
+"drum-machine@https://github.com/JoshuaHall/drum-machine":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/drum-machine.git#10ad6dd2a9d3df40323820191c8db14c4f4c6ffe"
+  resolved "https://github.com/JoshuaHall/drum-machine#10ad6dd2a9d3df40323820191c8db14c4f4c6ffe"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
     "@types/react" "^16.9.35"
@@ -11081,9 +11081,9 @@ markdown-escapes@^1.0.0:
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.4.tgz#c95415ef451499d7602b91095f3c8e8975f78535"
   integrity sha512-8z4efJYk43E0upd0NbVXwgSTQs6cT3T06etieCMEg7dRbzCbxUCK/GHlX8mhHRDcp+OLlHkPKsvqQTCvsRl2cg==
 
-"markdown-previewer@https://github.com/JoshuaHall/markdown-previewer.git":
+"markdown-previewer@https://github.com/JoshuaHall/markdown-previewer":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/markdown-previewer.git#82901b821c7a102f77e9cf1d5dc4c83915c20020"
+  resolved "https://github.com/JoshuaHall/markdown-previewer#82901b821c7a102f77e9cf1d5dc4c83915c20020"
   dependencies:
     "@types/dompurify" "^2.0.2"
     "@types/marked" "^0.7.4"
