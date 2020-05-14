@@ -5776,7 +5776,7 @@ download@^7.1.0:
 
 "drum-machine@https://github.com/JoshuaHall/drum-machine.git":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/drum-machine.git#ff60f9c71ed90773a6e366d8bdf9c4c16c88b65b"
+  resolved "https://github.com/JoshuaHall/drum-machine.git#10ad6dd2a9d3df40323820191c8db14c4f4c6ffe"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
     "@types/react" "^16.9.35"
@@ -11083,7 +11083,7 @@ markdown-escapes@^1.0.0:
 
 "markdown-previewer@https://github.com/JoshuaHall/markdown-previewer.git":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/markdown-previewer.git#b07b51540cd3a199c5436a9884664d3062f3a7ce"
+  resolved "https://github.com/JoshuaHall/markdown-previewer.git#82901b821c7a102f77e9cf1d5dc4c83915c20020"
   dependencies:
     "@types/dompurify" "^2.0.2"
     "@types/marked" "^0.7.4"
@@ -12959,7 +12959,7 @@ pnp-webpack-plugin@1.6.4, pnp-webpack-plugin@^1.6.4:
 
 "pomodoro-clock@https://github.com/JoshuaHall/pomodoro-clock":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/pomodoro-clock#c44d556c5a4e9cf9b07685c495aa7edc38c230fa"
+  resolved "https://github.com/JoshuaHall/pomodoro-clock#de9a16aec6302a8025db0626dde6de3534f7084a"
   dependencies:
     "@types/react" "^16.9.0"
     "@types/react-dom" "^16.9.0"
@@ -14101,7 +14101,7 @@ quick-lru@^4.0.1:
 
 "quote-box@https://github.com/JoshuaHall/quote-box":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/quote-box#7cfe8bf2f6fc7db9262c8ab4eefa8cc01b0ab79a"
+  resolved "https://github.com/JoshuaHall/quote-box#b5248faf76508add4b65ee4923d8b8572015415b"
   dependencies:
     "@types/react" "^16.9.35"
     "@types/react-dom" "^16.9.8"
@@ -16925,9 +16925,9 @@ ts-pnp@^1.1.6:
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
 tslib@^1.10.0, tslib@^1.11.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.12.0.tgz#d1fc9cacd06a1456c62f2902b361573e83d66473"
-  integrity sha512-5rxCQkP0kytf4H1T4xz1imjxaUUPMvc5aWp0rJ/VMIN7ClRiH1FwFvBt8wOeMasp/epeUnmSW6CixSIePtiLqA==
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
+  integrity sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
 
 tsutils@^3.17.1:
   version "3.17.1"

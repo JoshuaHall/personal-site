@@ -23,7 +23,7 @@ export function PortfolioPageLayout({
 
       <hr />
 
-      <div className="bulma-fonts">{element}</div>
+      <div className="container bulma-fonts">{element}</div>
     </DefaultLayout>
   );
 }

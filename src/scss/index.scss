@@ -54,3 +54,13 @@ $body-font-size: 1.1em;
 .resume-job:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+
+/*! purgecss start ignore */
+.textarea[rows] {
+  height: initial;
+}
+
+.input[readonly] {
+  box-shadow: none;
+}
+/*! purgecss end ignore */
