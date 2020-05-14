@@ -25,7 +25,7 @@ export default function PomodoroClockPage({ data }: PomodoroClockPageProps): Rea
           beepLengthMs={3500}
           initialSession={25}
           initialBreak={5}
-          beepSrcUrl="http://soundbible.com/mp3/Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3"
+          beepSrcUrl="https://soundbible.com/mp3/Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3"
         />
       }
       {...data.github.viewer.repository}
