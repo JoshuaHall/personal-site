@@ -12959,7 +12959,7 @@ pnp-webpack-plugin@1.6.4, pnp-webpack-plugin@^1.6.4:
 
 "pomodoro-clock@https://github.com/JoshuaHall/pomodoro-clock":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/pomodoro-clock#de9a16aec6302a8025db0626dde6de3534f7084a"
+  resolved "https://github.com/JoshuaHall/pomodoro-clock#bbf385e6b243f39f31cd88cf55cc52dc397c958c"
   dependencies:
     "@types/react" "^16.9.0"
     "@types/react-dom" "^16.9.0"
