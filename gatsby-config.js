@@ -167,6 +167,7 @@ module.exports = {
           'pagination-list',
           'pagination-link',
           'is-current',
+          'drum-machine',
         ],
         ignore: ['prismjs/'],
       },

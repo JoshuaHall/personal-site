@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { DrumMachine } from 'drum-machine';
+import { DrumMachine, initVolume, initDrumPadData } from 'drum-machine';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
 interface DrumMachinePageProps {
@@ -18,7 +18,12 @@ interface DrumMachinePageProps {
 }
 
 export default function DrumMachinePage({ data }: DrumMachinePageProps): ReactElement<DrumMachinePageProps> {
-  return <PortfolioPageLayout element={<DrumMachine />} {...data.github.viewer.repository} />;
+  return (
+    <PortfolioPageLayout
+      element={<DrumMachine initialVolume={initVolume} drumPadData={initDrumPadData} />}
+      {...data.github.viewer.repository}
+    />
+  );
 }
 
 export const query = graphql`

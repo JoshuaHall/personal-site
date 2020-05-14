@@ -33,10 +33,11 @@ $body-font-size: 1.1em;
 @import '~bulma-slider';
 
 .drum-pad {
-  border: 2px solid black;
-  border-radius: 10px;
-  margin: 3rem;
-  padding: 1rem;
+  width: 50px;
+}
+
+#drum-machine {
+  width: 300px;
 }
 
 .level-align-start {

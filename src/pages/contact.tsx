@@ -19,31 +19,28 @@ export default function Contact(): ReactElement {
               <h1 className="card-header-title">Contact</h1>
             </header>
             <div className="card-content">
-              <div>
-                <p>You can reach me in a few different ways:</p>
-                <ul>
-                  <li>
-                    <a href={`mailto:${myEmail}`}>
-                      <CustomIcon icon={faEnvelope} alignWithText /> Email
-                    </a>
-                  </li>
-                  <li>
-                    <a href={myLinkedIn}>
-                      <CustomIcon icon={faLinkedin} alignWithText /> LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a href={`tel:+${myPhone}`}>
-                      <CustomIcon icon={faPhone} alignWithText /> {myFormattedPhone}
-                    </a>
-                  </li>
-                  <li>
-                    <a href={myGitHub}>
-                      <CustomIcon icon={faGithub} alignWithText /> GitHub
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <ul>
+                <li>
+                  <a href={`mailto:${myEmail}`}>
+                    <CustomIcon icon={faEnvelope} alignWithText /> Email
+                  </a>
+                </li>
+                <li>
+                  <a href={myLinkedIn}>
+                    <CustomIcon icon={faLinkedin} alignWithText /> LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:+${myPhone}`}>
+                    <CustomIcon icon={faPhone} alignWithText /> {myFormattedPhone}
+                  </a>
+                </li>
+                <li>
+                  <a href={myGitHub}>
+                    <CustomIcon icon={faGithub} alignWithText /> GitHub
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
