@@ -65,7 +65,7 @@
     "gatsby-plugin-typography": "^2.5.1",
     "gatsby-source-filesystem": "2.3.8",
     "gatsby-transformer-remark": "^2.8.7",
-    "gatsby-transformer-sharp": "2.5.2",
+    "gatsby-transformer-sharp": "2.5.3",
     "prettier": "^2.0.5",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",
