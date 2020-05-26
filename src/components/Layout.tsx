@@ -26,10 +26,10 @@ export function Layout({ children, title, description }: LayoutProps): ReactElem
       </Helmet>
       <SEO author={author} description={description || siteDescription} />
       <Nav title={siteTitle} gitHubUrl={myGitHub} linkedInUrl={myLinkedIn}>
-        <NavLink href="/blog/" text="Blog" />
-        <NavLink href="/portfolio/" text="Portfolio" />
-        <NavLink href="/resume/" text="Resume" />
-        <NavLink href="/contact/" text="Contact" />
+        <NavLink url="/blog/" text="Blog" />
+        <NavLink url="/portfolio/" text="Portfolio" />
+        <NavLink url="/resume/" text="Resume" />
+        <NavLink url="/contact/" text="Contact" />
       </Nav>
       {children}
       <Footer />

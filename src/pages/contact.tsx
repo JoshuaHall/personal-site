@@ -3,8 +3,10 @@ import React, { ReactElement } from 'react';
 import { DefaultLayout } from '../components/DefaultLayout';
 import { CustomIcon } from '../components/CustomIcon';
 
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import envelopeIcon from '@iconify/icons-fa-solid/envelope';
+import phoneIcon from '@iconify/icons-fa-solid/phone';
+import linkedinIcon from '@iconify/icons-fa-brands/linkedin';
+import githubIcon from '@iconify/icons-fa-brands/github';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 export default function Contact(): ReactElement {
@@ -22,22 +24,22 @@ export default function Contact(): ReactElement {
               <ul>
                 <li>
                   <a href={`mailto:${myEmail}`}>
-                    <CustomIcon icon={faEnvelope} alignWithText /> Email
+                    <CustomIcon icon={envelopeIcon} alignWithText /> Email
                   </a>
                 </li>
                 <li>
                   <a href={myLinkedIn}>
-                    <CustomIcon icon={faLinkedin} alignWithText /> LinkedIn
+                    <CustomIcon icon={linkedinIcon} alignWithText /> LinkedIn
                   </a>
                 </li>
                 <li>
                   <a href={`tel:+${myPhone}`}>
-                    <CustomIcon icon={faPhone} alignWithText /> {myFormattedPhone}
+                    <CustomIcon icon={phoneIcon} alignWithText /> {myFormattedPhone}
                   </a>
                 </li>
                 <li>
                   <a href={myGitHub}>
-                    <CustomIcon icon={faGithub} alignWithText /> GitHub
+                    <CustomIcon icon={githubIcon} alignWithText /> GitHub
                   </a>
                 </li>
               </ul>

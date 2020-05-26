@@ -1,35 +1,82 @@
 import React, { ReactElement } from 'react';
 
-import { faEnvelope, faHome, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+// FA SOLID
+import envelopeIcon from '@iconify/icons-fa-solid/envelope';
+import homeIcon from '@iconify/icons-fa-solid/home';
+import phoneIcon from '@iconify/icons-fa-solid/phone';
+import searchIcon from '@iconify/icons-fa-solid/search';
+import medalIcon from '@iconify/icons-fa-solid/medal';
+
+// FA BRANDS
+import linkedinIcon from '@iconify/icons-fa-brands/linkedin';
+import githubIcon from '@iconify/icons-fa-brands/github';
+import html5Icon from '@iconify/icons-fa-brands/html5';
+import css3Icon from '@iconify/icons-fa-brands/css3';
+import sassIcon from '@iconify/icons-fa-brands/sass';
+import javaScriptIcon from '@iconify/icons-fa-brands/js';
+import pythonIcon from '@iconify/icons-fa-brands/python';
+import reactIcon from '@iconify/icons-fa-brands/react';
+import angularIcon from '@iconify/icons-fa-brands/angular';
+import gitAltIcon from '@iconify/icons-fa-brands/git-alt';
+import nodeJsIcon from '@iconify/icons-fa-brands/node-js';
+
+// SIMPLE ICONS
+import typeScriptIcon from '@iconify/icons-simple-icons/typescript';
+import gatsbyIcon from '@iconify/icons-simple-icons/gatsby';
+import eslintIcon from '@iconify/icons-simple-icons/eslint';
+
+// ICONS LOGOS
+import cSharpIcon from '@iconify/icons-logos/c-sharp';
+import elmIcon from '@iconify/icons-logos/elm';
+
+// ICONS CLARITY
+import designIcon from '@iconify/icons-clarity/design-solid';
+
+// ICONS IC
+import userInterfaceIcon from '@iconify/icons-ic/round-web';
+import roundRateReviewIcon from '@iconify/icons-ic/round-rate-review';
+import roundHighQualityIcon from '@iconify/icons-ic/round-high-quality';
 
 import { DefaultLayout } from '../components/DefaultLayout';
 import { CustomIcon } from '../components/CustomIcon';
 import { ChildrenProps } from '../childrenProps';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { ExternalLinkNewTabWithIcon } from '../components/ExternalLink';
+
+type ListWithIcons = [string, object][];
 
 export default function Resume(): ReactElement {
   const { myLinkedIn, myEmail, myGitHub, myFormattedPhone, myPhone } = useSiteMetadata();
 
-  const skillsList = [
-    'Design patterns and principles',
-    'Technical analysis',
-    'Web user interfaces',
-    'Code delivery review',
-    'Quality Assurance',
-    'Software best practices',
+  const skillsList: ListWithIcons = [
+    ['Design patterns and principles', designIcon],
+    ['Technical analysis', searchIcon],
+    ['Web user interfaces', userInterfaceIcon],
+    ['Code delivery review', roundRateReviewIcon],
+    ['Quality Assurance', roundHighQualityIcon],
+    ['Software best practices', medalIcon],
   ];
 
-  const languagesList = ['JavaScript and TypeScript', 'HTML and CSS', 'C#', 'Elm', 'Python'];
+  const languagesList: ListWithIcons = [
+    ['HTML5', html5Icon],
+    ['CSS3', css3Icon],
+    ['Sass', sassIcon],
+    ['JavaScript', javaScriptIcon],
+    ['TypeScript', typeScriptIcon],
+    ['C#', cSharpIcon],
+    ['Elm', elmIcon],
+    ['Python', pythonIcon],
+  ];
 
-  const toolsAndFrameworksList = [
-    'React',
-    'Elm Architecture',
-    'Angular 2',
-    'GatsbyJS',
-    'Git',
-    'GitHub',
-    'Code linters and analyzers',
+  const toolsAndFrameworksList: ListWithIcons = [
+    ['React', reactIcon],
+    ['Elm Architecture', elmIcon],
+    ['Node.js', nodeJsIcon],
+    ['Angular 2', angularIcon],
+    ['GatsbyJS', gatsbyIcon],
+    ['Git', gitAltIcon],
+    ['GitHub', githubIcon],
+    ['Code linters and analyzers', eslintIcon],
   ];
 
   return (
@@ -41,26 +88,26 @@ export default function Resume(): ReactElement {
       </div>
       <div className="columns is-multiline is-centered">
         <ResumeSubtitleColumn>
-          <CustomIcon icon={faHome} alignWithText /> Kansas City, MO
+          <CustomIcon icon={homeIcon} alignWithText /> Kansas City, MO
         </ResumeSubtitleColumn>
         <ResumeSubtitleColumn>
           <a href={`tel:+${myPhone}`}>
-            <CustomIcon icon={faPhone} alignWithText /> {myFormattedPhone}
+            <CustomIcon icon={phoneIcon} alignWithText /> {myFormattedPhone}
           </a>
         </ResumeSubtitleColumn>
         <ResumeSubtitleColumn>
           <a href={`mailto:${myEmail}`}>
-            <CustomIcon icon={faEnvelope} alignWithText /> {myEmail}
+            <CustomIcon icon={envelopeIcon} alignWithText /> {myEmail}
           </a>
         </ResumeSubtitleColumn>
         <ResumeSubtitleColumn>
           <a href={myLinkedIn}>
-            <CustomIcon icon={faLinkedin} alignWithText /> LinkedIn
+            <CustomIcon icon={linkedinIcon} alignWithText /> LinkedIn
           </a>
         </ResumeSubtitleColumn>
         <ResumeSubtitleColumn>
           <a href={myGitHub}>
-            <CustomIcon icon={faGithub} alignWithText /> GitHub
+            <CustomIcon icon={githubIcon} alignWithText /> GitHub
           </a>
         </ResumeSubtitleColumn>
       </div>
@@ -70,7 +117,7 @@ export default function Resume(): ReactElement {
       <div className="columns is-centered">
         <div className="column">
           <h2 className="title">Professional Summary</h2>
-          <p className="content">
+          <p className="content is-size-5">
             Software Developer welcoming challenging projects and enjoying working with all sorts of personalities.
             Committed to writing high quality code that results in a smooth end user experience.
           </p>
@@ -134,10 +181,8 @@ export default function Resume(): ReactElement {
       <div className="columns">
         <div className="column">
           <h2 className="title">Accomplishments</h2>
-          <div className="content">
-            <ul>
-              <li>Eagle Scout rank in the Boy Scouts of America</li>
-            </ul>
+          <div className="box">
+            <p className="content has-text-weight-bold">2016 - Eagle Scout rank in the Boy Scouts of America</p>
           </div>
         </div>
       </div>
@@ -146,8 +191,16 @@ export default function Resume(): ReactElement {
           <h2 className="title">Certifications</h2>
           <div className="content">
             <ul>
-              <li>FreeCodeCamp.org JavaScript Algorithms and Data Structures</li>
-              <li>FreeCodeCamp.org Front End Libraries Developer Certification</li>
+              <li>
+                <ExternalLinkNewTabWithIcon href="https://www.freecodecamp.org/certification/joshuahall/javascript-algorithms-and-data-structures">
+                  FreeCodeCamp.org JavaScript Algorithms and Data Structures
+                </ExternalLinkNewTabWithIcon>
+              </li>
+              <li>
+                <ExternalLinkNewTabWithIcon href="https://www.freecodecamp.org/certification/joshuahall/front-end-libraries">
+                  FreeCodeCamp.org Front End Libraries Developer Certification
+                </ExternalLinkNewTabWithIcon>
+              </li>
             </ul>
           </div>
         </div>
@@ -166,27 +219,30 @@ function ResumeSubtitleColumn({ children }: ChildrenProps): ReactElement<Childre
 
 interface SkillsColumnProps {
   text: string;
+  icon: object;
 }
 
-function SkillsColumn({ text }: SkillsColumnProps): ReactElement<SkillsColumnProps> {
+function SkillsColumn({ text, icon }: SkillsColumnProps): ReactElement<SkillsColumnProps> {
   return (
     <div className="column is-4">
       <div className="box">
-        <p className="content has-text-centered">{text}</p>
+        <p className="content has-text-centered">
+          <CustomIcon icon={icon} alignWithText /> {text}
+        </p>
       </div>
     </div>
   );
 }
 
 interface ColumnsWithBoxesProps {
-  columnTexts: string[];
+  columnTexts: ListWithIcons;
 }
 
 function ColumnsWithBoxes({ columnTexts }: ColumnsWithBoxesProps): ReactElement<ColumnsWithBoxesProps> {
   return (
     <div className="columns is-centered is-multiline">
-      {columnTexts.map((text) => (
-        <SkillsColumn key={text} text={text} />
+      {columnTexts.map(([text, icon]: [string, object]) => (
+        <SkillsColumn key={text} text={text} icon={icon} />
       ))}
     </div>
   );
@@ -223,7 +279,7 @@ function ResumeJob({ title, duration, companyName, location, children }: ResumeJ
     <div className="card resume-job">
       <div className="card-header">
         <div className="card-header-title">
-          {title}, {duration} - {companyName}, {location}
+          {title}, {companyName} - {duration} - {location}
         </div>
       </div>
       <div className="card-content">

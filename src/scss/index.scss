@@ -32,13 +32,9 @@ $body-font-size: 1.1em;
 @import 'bulma';
 @import '~bulma-slider';
 
-.drum-pad {
-  width: 50px;
-}
-
-#drum-machine {
-  width: 300px;
-}
+@import '../../node_modules/drum-machine/src/styles';
+@import '../../quickfrac/styles.css';
+@import '../../node_modules/calculator/src/index';
 
 .level-align-start {
   align-items: start;
@@ -49,7 +45,7 @@ $body-font-size: 1.1em;
 }
 
 .icon-with-text {
-  transform: translateY(+10%);
+  transform: translateY(+20%);
 }
 
 .resume-job:not(:last-child) {

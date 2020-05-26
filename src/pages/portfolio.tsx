@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 
 import { DefaultLayout } from '../components/DefaultLayout';
 import { Link, graphql } from 'gatsby';
+import { ExternalLinkNewTabWithIcon } from '../components/ExternalLink';
 
 interface GithubRepo {
   name: string;
@@ -14,14 +15,31 @@ interface PortfolioTileLinkProps extends GithubRepo {
 
 function PortfolioTileLink({ url, name, description }: PortfolioTileLinkProps): ReactElement<PortfolioTileLinkProps> {
   return (
-    <div className="columns">
-      <div className="column">
-        <Link to={url}>
-          <h3 className="title">{name}</h3>
-        </Link>
-        <p className="content">{description}</p>
-      </div>
-    </div>
+    <>
+      <Link to={url}>
+        <h3 className="title">{name}</h3>
+      </Link>
+      <p className="content">{description}</p>
+    </>
+  );
+}
+
+interface PortfolioTileExternalLinkProps extends GithubRepo {
+  url: string;
+}
+
+function PortfolioTileExternalLink({
+  url,
+  name,
+  description,
+}: PortfolioTileExternalLinkProps): ReactElement<PortfolioTileExternalLinkProps> {
+  return (
+    <>
+      <ExternalLinkNewTabWithIcon href={url}>
+        <h3 className="title">{name}</h3>
+      </ExternalLinkNewTabWithIcon>
+      <p className="content">{description}</p>
+    </>
   );
 }
 
@@ -29,10 +47,11 @@ interface PortfolioPageProps {
   data: {
     github: {
       viewer: {
-        drumMachine: GithubRepo;
+        elmFraction: GithubRepo;
         quickfrac: GithubRepo;
         quoteBox: GithubRepo;
         markdownPreviewer: GithubRepo;
+        drumMachine: GithubRepo;
         calculator: GithubRepo;
         pomodoroClock: GithubRepo;
       };
@@ -41,7 +60,15 @@ interface PortfolioPageProps {
 }
 
 export default function Portfolio({ data }: PortfolioPageProps): ReactElement<PortfolioPageProps> {
-  const { drumMachine, quickfrac, quoteBox, markdownPreviewer, calculator, pomodoroClock } = data.github.viewer;
+  const {
+    elmFraction,
+    quickfrac,
+    quoteBox,
+    markdownPreviewer,
+    drumMachine,
+    calculator,
+    pomodoroClock,
+  } = data.github.viewer;
 
   return (
     <DefaultLayout title="Portfolio">
@@ -51,6 +78,7 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
       <hr />
 
       <h3 className="title">Personal Projects:</h3>
+      <PortfolioTileExternalLink url="https://github.com/JoshuaHall/elm-fraction" {...elmFraction} />
       <PortfolioTileLink url="/portfolio/quickfrac" {...quickfrac} />
 
       <hr />
@@ -69,6 +97,10 @@ export const query = graphql`
   query PortfolioQuery {
     github {
       viewer {
+        elmFraction: repository(name: "elm-fraction") {
+          name
+          description
+        }
         quickfrac: repository(name: "quickfrac") {
           name
           description

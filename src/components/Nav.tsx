@@ -1,7 +1,8 @@
 import React, { ReactElement, useState } from 'react';
 
 import { CustomIcon } from './CustomIcon';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import linkedinIcon from '@iconify/icons-fa-brands/linkedin';
+import githubIcon from '@iconify/icons-fa-brands/github';
 
 import { ChildrenProps } from '../childrenProps';
 
@@ -42,11 +43,23 @@ export function Nav({ title, children, linkedInUrl, gitHubUrl }: NavProps): Reac
       <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu} role="button">
         <NavBeginning>{children}</NavBeginning>
         <NavEnding>
-          <a className="navbar-item" href={linkedInUrl} aria-label="LinkedIn link with icon">
-            <CustomIcon icon={faLinkedin} size="lg" />
+          <a
+            className="navbar-item"
+            href={linkedInUrl}
+            aria-label="LinkedIn link with icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CustomIcon icon={linkedinIcon} />
           </a>
-          <a className="navbar-item" href={gitHubUrl} aria-label="GitHub link with icon">
-            <CustomIcon icon={faGithub} size="lg" />
+          <a
+            className="navbar-item"
+            href={gitHubUrl}
+            aria-label="GitHub link with icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CustomIcon icon={githubIcon} />
           </a>
         </NavEnding>
       </div>
@@ -63,13 +76,13 @@ export function NavEnding({ children }: ChildrenProps): ReactElement<ChildrenPro
 }
 
 interface NavLinkProps {
-  href: string;
+  url: string;
   text: string;
 }
 
-export function NavLink({ href, text }: NavLinkProps): ReactElement<NavLinkProps> {
+export function NavLink({ url, text }: NavLinkProps): ReactElement<NavLinkProps> {
   return (
-    <Link to={href} className="navbar-item">
+    <Link to={url} className="navbar-item">
       <h4>{text}</h4>
     </Link>
   );
