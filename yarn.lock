@@ -14078,7 +14078,8 @@ quick-lru@^4.0.1:
 
 "quote-box@https://github.com/JoshuaHall/quote-box":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/quote-box#b5248faf76508add4b65ee4923d8b8572015415b"
+  uid f69b98b4786cae497a9f06113fe2bdc56c805162
+  resolved "https://github.com/JoshuaHall/quote-box#f69b98b4786cae497a9f06113fe2bdc56c805162"
   dependencies:
     "@types/react" "^16.9.35"
     "@types/react-dom" "^16.9.8"
@@ -14086,7 +14087,7 @@ quick-lru@^4.0.1:
     react "^16.13.1"
     react-dom "^16.13.1"
     react-scripts "3.4.1"
-    typescript "~3.9.2"
+    typescript "~3.9.3"
 
 raf@^3.4.1:
   version "3.4.1"
@@ -17023,7 +17024,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.3, typescript@~3.9.2:
+typescript@3.9.3, typescript@~3.9.2, typescript@~3.9.3:
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
   integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
