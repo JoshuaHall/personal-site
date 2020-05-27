@@ -36,6 +36,7 @@
     "vfile-message": "^2.0.4"
   },
   "devDependencies": {
+    "@octokit/graphql-schema": "^8.8.0",
     "@types/react": "^16.9.34",
     "@types/react-dom": "16.9.8",
     "@types/react-helmet": "6.0.0",
@@ -69,6 +70,7 @@
     "gatsby-source-filesystem": "2.3.8",
     "gatsby-transformer-remark": "^2.8.7",
     "gatsby-transformer-sharp": "2.5.3",
+    "graphql-tag": "^2.10.3",
     "prettier": "^2.0.5",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",

@@ -1,4 +1,7 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/explicit-function-return-type */
+
+const { buildClientSchema } = require('graphql');
+const { schema } = require('@octokit/graphql-schema');
 
 require('dotenv').config();
 
@@ -40,6 +43,9 @@ module.exports = {
         url: `https://api.github.com/graphql`,
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+        createSchema: async () => {
+          return buildClientSchema(schema.json);
         },
       },
     },

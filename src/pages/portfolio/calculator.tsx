@@ -21,7 +21,7 @@ interface CalculatorPageProps {
 }
 
 export default function CalculatorPage({ data }: CalculatorPageProps): ReactElement<CalculatorPageProps> {
-  return <PortfolioPageLayout element={<Calculator initialInput={'0'} />} {...data.github.viewer.repository} />;
+  return <PortfolioPageLayout element={<Calculator initialInput={0} />} {...data.github.viewer.repository} />;
 }
 
 export const query = graphql`
