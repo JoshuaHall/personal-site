@@ -56,10 +56,10 @@ export const query = graphql`
   }
 
   query {
-    portrait: file(relativePath: { eq: "BridgePhoto.jpg" }) {
+    portrait: file(relativePath: { eq: "BridgePhoto.png" }) {
       ...defaultImage
     }
-    climbing: file(relativePath: { eq: "Climbing.jpg" }) {
+    climbing: file(relativePath: { eq: "Climbing.png" }) {
       ...defaultImage
     }
   }
