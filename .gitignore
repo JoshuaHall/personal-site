@@ -70,3 +70,6 @@ yarn-error.log
 
 # Elm
 elm-stuff/
+
+# Visual Studio Code
+.vscode/

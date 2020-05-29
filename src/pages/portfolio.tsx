@@ -4,19 +4,31 @@ import { DefaultLayout } from '../components/DefaultLayout';
 import { Link, graphql } from 'gatsby';
 import { ExternalLinkNewTabWithIcon } from '../components/ExternalLink';
 
-interface GithubRepo {
+export interface GithubRepo {
   name: string;
   description: string;
 }
 
-interface PortfolioTileLinkProps extends GithubRepo {
-  url: string;
+export interface PortfolioLinkPageProps {
+  data: {
+    github: {
+      viewer: {
+        repository: GithubRepo;
+      };
+    };
+  };
 }
 
-function PortfolioTileLink({ url, name, description }: PortfolioTileLinkProps): ReactElement<PortfolioTileLinkProps> {
+function createPortfolioUrl(name: string): string {
+  return `/portfolio/${name}`;
+}
+
+type PortfolioTileLinkProps = GithubRepo;
+
+function PortfolioTileLink({ name, description }: PortfolioTileLinkProps): ReactElement<PortfolioTileLinkProps> {
   return (
     <>
-      <Link to={url}>
+      <Link to={createPortfolioUrl(name)}>
         <h3 className="title">{name}</h3>
       </Link>
       <p className="content">{description}</p>
@@ -49,6 +61,7 @@ interface PortfolioPageProps {
       viewer: {
         elmFraction: GithubRepo;
         quickfrac: GithubRepo;
+        gameOfLife: GithubRepo;
         quoteBox: GithubRepo;
         markdownPreviewer: GithubRepo;
         drumMachine: GithubRepo;
@@ -63,6 +76,7 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
   const {
     elmFraction,
     quickfrac,
+    gameOfLife,
     quoteBox,
     markdownPreviewer,
     drumMachine,
@@ -79,16 +93,17 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
 
       <h3 className="title">Personal Projects:</h3>
       <PortfolioTileExternalLink url="https://github.com/JoshuaHall/elm-fraction" {...elmFraction} />
-      <PortfolioTileLink url="/portfolio/quickfrac" {...quickfrac} />
+      <PortfolioTileLink {...quickfrac} />
+      <PortfolioTileLink {...gameOfLife} />
 
       <hr />
 
       <h3 className="title">FreeCodeCamp.org Front End Libraries Certification Projects:</h3>
-      <PortfolioTileLink url="/portfolio/quote-box" {...quoteBox} />
-      <PortfolioTileLink url="/portfolio/markdown-previewer" {...markdownPreviewer} />
-      <PortfolioTileLink url="/portfolio/drum-machine" {...drumMachine} />
-      <PortfolioTileLink url="/portfolio/calculator" {...calculator} />
-      <PortfolioTileLink url="/portfolio/pomodoro-clock" {...pomodoroClock} />
+      <PortfolioTileLink {...quoteBox} />
+      <PortfolioTileLink {...markdownPreviewer} />
+      <PortfolioTileLink {...drumMachine} />
+      <PortfolioTileLink {...calculator} />
+      <PortfolioTileLink {...pomodoroClock} />
     </DefaultLayout>
   );
 }
@@ -102,6 +117,10 @@ export const query = graphql`
           description
         }
         quickfrac: repository(name: "quickfrac") {
+          name
+          description
+        }
+        gameOfLife: repository(name: "game-of-life") {
           name
           description
         }

@@ -3,26 +3,13 @@ import { graphql } from 'gatsby';
 
 import createDOMPurify from 'dompurify';
 
-import { MarkdownPreviewer, initialEditorInput } from 'markdown-previewer';
+import { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 import { DefaultLayout } from '../../components/DefaultLayout';
 
-interface MarkdownPreviewerPageProps {
-  data: {
-    github: {
-      viewer: {
-        repository: {
-          name: string;
-          description: string;
-        };
-      };
-    };
-  };
-}
+import { MarkdownPreviewer, initialEditorInput } from 'markdown-previewer';
 
-export default function MarkdownPreviewerPage({
-  data,
-}: MarkdownPreviewerPageProps): ReactElement<MarkdownPreviewerPageProps> {
+export default function MarkdownPreviewerPage({ data }: PortfolioLinkPageProps): ReactElement<PortfolioLinkPageProps> {
   if (typeof window !== 'undefined') {
     const purifier = createDOMPurify(window);
 
@@ -32,13 +19,13 @@ export default function MarkdownPreviewerPage({
         {...data.github.viewer.repository}
       />
     );
-  } else {
-    return (
-      <DefaultLayout>
-        <h1 className="title">Loading...</h1>
-      </DefaultLayout>
-    );
   }
+
+  return (
+    <DefaultLayout>
+      <h1 className="title">Loading...</h1>
+    </DefaultLayout>
+  );
 }
 
 export const query = graphql`

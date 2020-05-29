@@ -12,7 +12,7 @@ interface ElmHandlerProps {
   ports?: (appPorts: object) => void;
 }
 
-const ElmHandler = React.memo(
+export const ElmHandler = React.memo(
   ({ src, ports }: ElmHandlerProps) => {
     const node = useRef(null);
 
@@ -33,5 +33,3 @@ const ElmHandler = React.memo(
   },
   () => false,
 );
-
-export default ElmHandler;

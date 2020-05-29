@@ -1,28 +1,20 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import ElmHandler from '../../components/ElmHandler';
+import { ElmHandler } from '../../components/ElmHandler';
 
 // Includes elm-canvas for use with elm-canvas and quickfrac
 import 'elm-canvas';
 
-import { Elm } from '../../../quickfrac/src/Main.elm';
+import { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
-interface QuickfracPageProps {
-  data: {
-    github: {
-      viewer: {
-        repository: {
-          name: string;
-          description: string;
-        };
-      };
-    };
-  };
-}
+// Sort of a messy hack, but just silences the useless/incorrect TS error.
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
+import { Elm } from '../../../quickfrac/src/Main.elm';
 
-export default function QuickfracPage({ data }: QuickfracPageProps): ReactElement<QuickfracPageProps> {
+export default function QuickfracPage({ data }: PortfolioLinkPageProps): ReactElement<PortfolioLinkPageProps> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function addPorts(appPorts: any): void {
     appPorts.clearCanvas.subscribe(() => {

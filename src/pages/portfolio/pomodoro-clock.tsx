@@ -1,23 +1,12 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { PomodoroClock } from 'pomodoro-clock';
+import { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
-interface PomodoroClockPageProps {
-  data: {
-    github: {
-      viewer: {
-        repository: {
-          name: string;
-          description: string;
-        };
-      };
-    };
-  };
-}
+import { PomodoroClock } from 'pomodoro-clock';
 
-export default function PomodoroClockPage({ data }: PomodoroClockPageProps): ReactElement<PomodoroClockPageProps> {
+export default function PomodoroClockPage({ data }: PortfolioLinkPageProps): ReactElement<PortfolioLinkPageProps> {
   return (
     <PortfolioPageLayout
       element={

@@ -1,23 +1,12 @@
 import React, { ReactElement } from 'react';
 import { graphql } from 'gatsby';
 
-import { DrumMachine, initVolume, initDrumPadData } from 'drum-machine';
+import { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
-interface DrumMachinePageProps {
-  data: {
-    github: {
-      viewer: {
-        repository: {
-          name: string;
-          description: string;
-        };
-      };
-    };
-  };
-}
+import { DrumMachine, initVolume, initDrumPadData } from 'drum-machine';
 
-export default function DrumMachinePage({ data }: DrumMachinePageProps): ReactElement<DrumMachinePageProps> {
+export default function DrumMachinePage({ data }: PortfolioLinkPageProps): ReactElement<PortfolioLinkPageProps> {
   return (
     <PortfolioPageLayout
       element={<DrumMachine initialVolume={initVolume} drumPadData={initDrumPadData} />}
