@@ -20,7 +20,7 @@
     "elm-canvas": "^2.2.4",
     "game-of-life": "https://github.com/JoshuaHall/game-of-life",
     "gatsby-plugin-sass": "^2.3.0",
-    "gatsby-remark-prismjs": "^3.5.0",
+    "gatsby-remark-prismjs": "^3.5.3",
     "gatsby-source-graphql": "^2.5.0",
     "lodash": "^4.17.15",
     "markdown-previewer": "https://github.com/JoshuaHall/markdown-previewer",
