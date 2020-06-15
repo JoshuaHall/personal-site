@@ -59,6 +59,7 @@ interface PortfolioPageProps {
   data: {
     github: {
       viewer: {
+        personalPortfolio: GithubRepo;
         elmFraction: GithubRepo;
         quickfrac: GithubRepo;
         gameOfLife: GithubRepo;
@@ -74,6 +75,7 @@ interface PortfolioPageProps {
 
 export default function Portfolio({ data }: PortfolioPageProps): ReactElement<PortfolioPageProps> {
   const {
+    personalPortfolio,
     elmFraction,
     quickfrac,
     gameOfLife,
@@ -92,6 +94,7 @@ export default function Portfolio({ data }: PortfolioPageProps): ReactElement<Po
       <hr />
 
       <h3 className="title">Personal Projects:</h3>
+      <PortfolioTileExternalLink url="https://github.com/JoshuaHall/personal-site" {...personalPortfolio} />
       <PortfolioTileExternalLink url="https://github.com/JoshuaHall/elm-fraction" {...elmFraction} />
       <PortfolioTileLink {...quickfrac} />
       <PortfolioTileLink {...gameOfLife} />
@@ -112,6 +115,10 @@ export const query = graphql`
   query PortfolioQuery {
     github {
       viewer {
+        personalPortfolio: repository(name: "personal-site") {
+          name
+          description
+        }
         elmFraction: repository(name: "elm-fraction") {
           name
           description
