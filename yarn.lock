@@ -4807,17 +4807,18 @@ cacheable-request@^6.0.0:
 
 "calculator@https://github.com/JoshuaHall/calculator":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/calculator#e39b8d828f2388c9e772b257f68354be1a97d377"
+  uid "7b6a5a00991f092288ceeb8b7f4191df76b9b129"
+  resolved "https://github.com/JoshuaHall/calculator#7b6a5a00991f092288ceeb8b7f4191df76b9b129"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
-    "@types/react" "^16.9.35"
+    "@types/react" "^16.9.36"
     "@types/react-dom" "^16.9.8"
-    bulma "^0.8.2"
+    bulma "^0.9.0"
     node-sass "^4.14.1"
     react "^16.13.1"
     react-dom "^16.13.1"
     react-scripts "3.4.1"
-    typescript "~3.9.2"
+    typescript "~3.9.5"
     yarn "^1.22.4"
 
 call-me-maybe@^1.0.1:
@@ -18388,7 +18389,7 @@ typescript@3.9.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
   integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
 
-typescript@^3.9.2, typescript@~3.9.2, typescript@~3.9.3, typescript@~3.9.5:
+typescript@^3.9.2, typescript@~3.9.3, typescript@~3.9.5:
   version "3.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
   integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
