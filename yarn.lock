@@ -2862,10 +2862,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.0", "@types/react@^16.9.34", "@types/react@^16.9.35":
-  version "16.9.35"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.35.tgz#a0830d172e8aadd9bd41709ba2281a3124bbd368"
-  integrity sha512-q0n0SsWcGc8nDqH2GJfWQWUOmZSJhXV64CjVN5SvcNti3TdEaA3AH0D8DwNmMdzjMAC/78tB8nAZIlV8yTz+zQ==
+"@types/react@*", "@types/react@^16.9.0", "@types/react@^16.9.34", "@types/react@^16.9.35", "@types/react@^16.9.36":
+  version "16.9.36"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.36.tgz#ade589ff51e2a903e34ee4669e05dbfa0c1ce849"
+  integrity sha512-mGgUb/Rk/vGx4NCvquRuSH0GHBQKb1OqpGS9cT9lFxlTLHZgkksgI60TuIxubmn7JuCb+sENHhQciqa0npm0AQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -15244,15 +15244,16 @@ quick-lru@^4.0.1:
 
 "quote-box@https://github.com/JoshuaHall/quote-box":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/quote-box#f69b98b4786cae497a9f06113fe2bdc56c805162"
+  uid ec6cf17bbdafe396254fd5d6c65da370ba2815bf
+  resolved "https://github.com/JoshuaHall/quote-box#ec6cf17bbdafe396254fd5d6c65da370ba2815bf"
   dependencies:
-    "@types/react" "^16.9.35"
+    "@types/react" "^16.9.36"
     "@types/react-dom" "^16.9.8"
-    bulma "^0.8.2"
+    bulma "^0.9.0"
     react "^16.13.1"
     react-dom "^16.13.1"
     react-scripts "3.4.1"
-    typescript "~3.9.3"
+    typescript "~3.9.5"
 
 raf@^3.4.1:
   version "3.4.1"
@@ -18381,10 +18382,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.9.3, typescript@^3.9.2, typescript@~3.9.2, typescript@~3.9.3:
+typescript@3.9.3:
   version "3.9.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
   integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
+
+typescript@^3.9.2, typescript@~3.9.2, typescript@~3.9.3, typescript@~3.9.5:
+  version "3.9.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
+  integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
 
 typography-breakpoint-constants@^0.16.19:
   version "0.16.19"
