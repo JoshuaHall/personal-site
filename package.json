@@ -30,7 +30,7 @@
     "quote-box": "https://github.com/JoshuaHall/quote-box",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-helmet": "6.0.0",
+    "react-helmet": "6.1.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-lincoln": "^0.16.19",
