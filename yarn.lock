@@ -12181,11 +12181,12 @@ markdown-escapes@^1.0.0:
 
 "markdown-previewer@https://github.com/JoshuaHall/markdown-previewer":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/markdown-previewer#db96513ea7d211d769d8d1e88dc5e984c4aa2425"
+  uid "7e8d70631e0e0e78667545aa1a99882eb3342e33"
+  resolved "https://github.com/JoshuaHall/markdown-previewer#7e8d70631e0e0e78667545aa1a99882eb3342e33"
   dependencies:
     "@types/dompurify" "^2.0.2"
     "@types/marked" "^0.7.4"
-    "@types/react" "^16.9.36"
+    "@types/react" "^16.9.37"
     "@types/react-dom" "^16.9.8"
     bulma "^0.9.0"
     dompurify "^2.0.11"
