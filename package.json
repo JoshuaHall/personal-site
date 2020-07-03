@@ -21,7 +21,7 @@
     "game-of-life": "https://github.com/JoshuaHall/game-of-life",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-remark-prismjs": "^3.5.4",
-    "gatsby-source-graphql": "^2.5.0",
+    "gatsby-source-graphql": "^2.6.1",
     "lodash": "^4.17.15",
     "markdown-previewer": "https://github.com/JoshuaHall/markdown-previewer",
     "node-sass": "^4.14.0",
