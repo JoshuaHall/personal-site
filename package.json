@@ -22,7 +22,7 @@
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-remark-prismjs": "^3.5.4",
     "gatsby-source-graphql": "^2.5.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "markdown-previewer": "https://github.com/JoshuaHall/markdown-previewer",
     "node-sass": "^4.14.0",
     "pomodoro-clock": "https://github.com/JoshuaHall/pomodoro-clock",
