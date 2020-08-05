@@ -4797,10 +4797,11 @@ cacheable-request@^6.0.0:
 
 "calculator@https://github.com/JoshuaHall/calculator":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/calculator#7b6a5a00991f092288ceeb8b7f4191df76b9b129"
+  uid "5b356ecb3de832dd1f19109139800774c4803f22"
+  resolved "https://github.com/JoshuaHall/calculator#5b356ecb3de832dd1f19109139800774c4803f22"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
-    "@types/react" "^16.9.36"
+    "@types/react" "^16.9.37"
     "@types/react-dom" "^16.9.8"
     bulma "^0.9.0"
     node-sass "^4.14.1"
