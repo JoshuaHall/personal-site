@@ -26,7 +26,7 @@
     "markdown-previewer": "https://github.com/JoshuaHall/markdown-previewer",
     "node-sass": "^4.14.0",
     "pomodoro-clock": "https://github.com/JoshuaHall/pomodoro-clock",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "quote-box": "https://github.com/JoshuaHall/quote-box",
     "react": "16.13.1",
     "react-dom": "16.13.1",
