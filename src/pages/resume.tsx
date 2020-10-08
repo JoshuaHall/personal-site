@@ -42,8 +42,9 @@ import { CustomIcon } from '../components/CustomIcon';
 import { ChildrenProps } from '../childrenProps';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { ExternalLinkNewTabWithIcon } from '../components/ExternalLink';
+import { IconifyIcon } from '@iconify/icons-clarity';
 
-type ListWithIcons = [string, object][];
+type ListWithIcons = [string, IconifyIcon][];
 
 export default function Resume(): ReactElement {
   const { myLinkedIn, myEmail, myGitHub, myFormattedPhone, myPhone } = useSiteMetadata();
@@ -219,7 +220,7 @@ function ResumeSubtitleColumn({ children }: ChildrenProps): ReactElement<Childre
 
 interface SkillsColumnProps {
   text: string;
-  icon: object;
+  icon: IconifyIcon;
 }
 
 function SkillsColumn({ text, icon }: SkillsColumnProps): ReactElement<SkillsColumnProps> {
@@ -241,7 +242,7 @@ interface ColumnsWithBoxesProps {
 function ColumnsWithBoxes({ columnTexts }: ColumnsWithBoxesProps): ReactElement<ColumnsWithBoxesProps> {
   return (
     <div className="columns is-centered is-multiline">
-      {columnTexts.map(([text, icon]: [string, object]) => (
+      {columnTexts.map(([text, icon]: [string, IconifyIcon]) => (
         <SkillsColumn key={text} text={text} icon={icon} />
       ))}
     </div>

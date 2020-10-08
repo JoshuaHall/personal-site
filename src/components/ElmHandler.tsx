@@ -9,7 +9,7 @@ interface ElmHandlerProps {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     init: (opts: InitOptions) => any;
   };
-  ports?: (appPorts: object) => void;
+  ports?: (appPorts: unknown) => void;
 }
 
 export const ElmHandler = React.memo(

@@ -10,7 +10,6 @@ import { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
 // Sort of a messy hack, but just silences the useless/incorrect TS error.
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import { Elm } from '../../../quickfrac/src/Main.elm';
 
