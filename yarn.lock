@@ -15317,7 +15317,8 @@ quick-lru@^4.0.1:
 
 "quote-box@https://github.com/JoshuaHall/quote-box":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/quote-box#57b62d6725bc658cc212b069b969acabb135d5af"
+  uid "49e41943947d8030c477b20e62ecaefc670d5e5a"
+  resolved "https://github.com/JoshuaHall/quote-box#49e41943947d8030c477b20e62ecaefc670d5e5a"
   dependencies:
     "@types/react" "^16.9.37"
     "@types/react-dom" "^16.9.8"
