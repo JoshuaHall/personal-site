@@ -12198,7 +12198,8 @@ markdown-escapes@^1.0.0:
 
 "markdown-previewer@https://github.com/JoshuaHall/markdown-previewer":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/markdown-previewer#23e88ce36c9d36f3a4202309f3e966d08651ef84"
+  uid c29b9d505518d866f042a6605b55c45d87537134
+  resolved "https://github.com/JoshuaHall/markdown-previewer#c29b9d505518d866f042a6605b55c45d87537134"
   dependencies:
     "@types/dompurify" "^2.0.2"
     "@types/marked" "^0.7.4"
