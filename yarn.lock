@@ -4737,7 +4737,8 @@ cacheable-request@^7.0.1:
 
 "calculator@https://github.com/JoshuaHall/calculator":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/calculator#5b356ecb3de832dd1f19109139800774c4803f22"
+  uid "744d81287b1490ce7b029df466e0d5c81343552b"
+  resolved "https://github.com/JoshuaHall/calculator#744d81287b1490ce7b029df466e0d5c81343552b"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
     "@types/react" "^16.9.37"
