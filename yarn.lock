@@ -6649,7 +6649,8 @@ download@^7.1.0:
 
 "drum-machine@https://github.com/JoshuaHall/drum-machine":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/drum-machine#5f46febf6cf837383405594f75e820402f001b5a"
+  uid "4767ff3a445f489ebdfce8be47b6802b7aeb8112"
+  resolved "https://github.com/JoshuaHall/drum-machine#4767ff3a445f489ebdfce8be47b6802b7aeb8112"
   dependencies:
     "@srmagura/use-event-listener" "^0.2.1"
     "@types/react" "^16.9.37"
