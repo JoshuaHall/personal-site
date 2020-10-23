@@ -4,7 +4,7 @@ import Img, { FluidObject } from 'gatsby-image';
 
 import { Layout } from '../components/Layout';
 
-type GatsbyImageType = FluidObject | FluidObject[] | undefined;
+type GatsbyImageType = FluidObject | FluidObject[];
 
 interface GatsbyChildImageSharp {
   childImageSharp: {
@@ -51,6 +51,7 @@ export const query = graphql`
       fluid(maxWidth: 648, maxHeight: 615, quality: 100) {
         ...GatsbyImageSharpFluid
         ...GatsbyImageSharpFluidLimitPresentationSize
+        ...GatsbyImageSharpFluid_withWebp
       }
     }
   }
