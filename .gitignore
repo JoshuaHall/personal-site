@@ -73,3 +73,5 @@ elm-stuff/
 
 # Visual Studio Code
 .vscode/
+# Local Netlify folder
+.netlify
