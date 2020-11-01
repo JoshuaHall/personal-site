@@ -20,7 +20,7 @@
     "elm-canvas": "^2.2.4",
     "eslint-loader": "^4.0.2",
     "game-of-life": "https://github.com/JoshuaHall/game-of-life",
-    "gatsby-plugin-sass": "^2.3.4",
+    "gatsby-plugin-sass": "^2.3.22",
     "gatsby-remark-prismjs": "^3.5.4",
     "gatsby-source-graphql": "^2.5.0",
     "lodash": "^4.17.15",
