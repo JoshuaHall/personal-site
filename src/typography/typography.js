@@ -1,5 +1,7 @@
-// @ts-nocheck
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Typography from 'typography';
 
 import lincolnTheme from 'typography-theme-lincoln';

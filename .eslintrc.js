@@ -21,7 +21,7 @@ module.exports = {
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   plugins: ['react-hooks', 'jsx-a11y'],
-  ignorePatterns: ['public/'],
+  ignorePatterns: ['public/', 'quickfrac/'],
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     'react-hooks/rules-of-hooks': 'error',

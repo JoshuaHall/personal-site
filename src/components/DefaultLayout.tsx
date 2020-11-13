@@ -1,6 +1,8 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 
-import { Layout, LayoutProps } from './Layout';
+import { Layout } from './Layout';
+import type { LayoutProps } from './Layout';
 
 export function DefaultLayout({ children, title, description }: LayoutProps): ReactElement<LayoutProps> {
   return (

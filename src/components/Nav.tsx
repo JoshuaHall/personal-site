@@ -1,10 +1,11 @@
-import React, { ReactElement, useState } from 'react';
+import React, { useState } from 'react';
+import type { ReactElement } from 'react';
 
 import { CustomIcon } from './CustomIcon';
 import linkedinIcon from '@iconify/icons-fa-brands/linkedin';
 import githubIcon from '@iconify/icons-fa-brands/github';
 
-import { ChildrenProps } from '../childrenProps';
+import type { ChildrenProps } from '../childrenProps';
 
 import { not } from '../helperFunctions';
 import { Link } from 'gatsby';
@@ -22,25 +23,27 @@ export function Nav({ title, children, linkedInUrl, gitHubUrl }: NavProps): Reac
     setMenuOpen(not);
   }
 
+  const isActiveClass = isMenuOpen ? ' is-active' : '';
+
   return (
     <nav className="navbar is-fixed-top is-spaced is-primary" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           <h2 className="title">{title}</h2>
         </Link>
-        <a
-          role="button"
-          className={`navbar-burger${isMenuOpen ? ' is-active' : ''}`}
+        <button
+          className={`navbar-burger has-background-primary${isActiveClass}`}
           aria-label="menu"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen ? 'true' : 'false'}
           onClick={toggleMenu}
+          type="button"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </button>
       </div>
-      <div className={`navbar-menu${isMenuOpen ? ' is-active' : ''}`} onClick={toggleMenu} role="button">
+      <div className={`navbar-menu${isActiveClass}`} onClick={toggleMenu} role="button" tabIndex={0}>
         <NavBeginning>{children}</NavBeginning>
         <NavEnding>
           <a

@@ -1,13 +1,15 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 
 import { DefaultLayout } from '../components/DefaultLayout';
 import { CustomIcon } from '../components/CustomIcon';
+
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 import envelopeIcon from '@iconify/icons-fa-solid/envelope';
 import phoneIcon from '@iconify/icons-fa-solid/phone';
 import linkedinIcon from '@iconify/icons-fa-brands/linkedin';
 import githubIcon from '@iconify/icons-fa-brands/github';
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 export default function Contact(): ReactElement {
   const { myEmail, myLinkedIn, myPhone, myFormattedPhone, myGitHub } = useSiteMetadata();

@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
+
 import { graphql } from 'gatsby';
 
 import { ElmHandler } from '../../components/ElmHandler';
@@ -6,10 +8,11 @@ import { ElmHandler } from '../../components/ElmHandler';
 // Includes elm-canvas for use with elm-canvas and quickfrac
 import 'elm-canvas';
 
-import { PortfolioLinkPageProps } from '../portfolio';
+import type { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
 // Sort of a messy hack, but just silences the useless/incorrect TS error.
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Elm } from '../../../quickfrac/src/Main.elm';
 

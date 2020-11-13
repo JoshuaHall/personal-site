@@ -5,6 +5,12 @@ export interface MetaItem {
   content: string;
 }
 
+interface SiteMetadataQuery {
+  site: {
+    siteMetadata: SiteMetadata;
+  };
+}
+
 export interface SiteMetadata {
   title: string;
   description: string;
@@ -20,7 +26,7 @@ export interface SiteMetadata {
 }
 
 export function useSiteMetadata(): SiteMetadata {
-  const { site } = useStaticQuery(
+  const { site } = useStaticQuery<SiteMetadataQuery>(
     graphql`
       query SiteMetaData {
         site {
@@ -42,5 +48,5 @@ export function useSiteMetadata(): SiteMetadata {
     `,
   );
 
-  return site.siteMetadata as SiteMetadata;
+  return site.siteMetadata;
 }

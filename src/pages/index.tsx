@@ -1,6 +1,9 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
+
 import { graphql } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import Img from 'gatsby-image';
+import type { FluidObject } from 'gatsby-image';
 
 import { Layout } from '../components/Layout';
 

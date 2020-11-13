@@ -1,6 +1,8 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 
-import { Icon, IconifyIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
+import type { IconifyIcon } from '@iconify/react';
 
 interface CustomIconProps extends IconifyIcon {
   alignWithText?: boolean;

@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 import { CustomIcon } from './CustomIcon';
 
 import externalLinkIcon from '@iconify/icons-fa-solid/external-link-alt';

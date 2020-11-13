@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 
 // FA SOLID
 import envelopeIcon from '@iconify/icons-fa-solid/envelope';
@@ -39,10 +40,10 @@ import roundHighQualityIcon from '@iconify/icons-ic/round-high-quality';
 
 import { DefaultLayout } from '../components/DefaultLayout';
 import { CustomIcon } from '../components/CustomIcon';
-import { ChildrenProps } from '../childrenProps';
+import type { ChildrenProps } from '../childrenProps';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { ExternalLinkNewTabWithIcon } from '../components/ExternalLink';
-import { IconifyIcon } from '@iconify/icons-clarity';
+import type { IconifyIcon } from '@iconify/types';
 
 type ListWithIcons = [string, IconifyIcon][];
 

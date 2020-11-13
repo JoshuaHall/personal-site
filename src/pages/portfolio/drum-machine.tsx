@@ -1,7 +1,9 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
+
 import { graphql } from 'gatsby';
 
-import { PortfolioLinkPageProps } from '../portfolio';
+import type { PortfolioLinkPageProps } from '../portfolio';
 import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 
 import { DrumMachine, initVolume, initDrumPadData } from 'drum-machine';

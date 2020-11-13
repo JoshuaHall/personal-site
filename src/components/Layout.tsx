@@ -1,4 +1,6 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
+
 import { Helmet } from 'react-helmet';
 
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
@@ -8,7 +10,7 @@ import { NavLink } from './Nav';
 import { Footer } from './Footer';
 import { SEO } from './SEO';
 
-import { ChildrenProps } from '../childrenProps';
+import type { ChildrenProps } from '../childrenProps';
 
 export interface LayoutProps extends ChildrenProps {
   title?: string;

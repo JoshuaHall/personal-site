@@ -1,7 +1,9 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 
-import { useSiteMetadata, MetaItem } from '../hooks/useSiteMetadata';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import type { MetaItem } from '../hooks/useSiteMetadata';
 
 type SEOProps = {
   title?: string;
@@ -22,6 +24,7 @@ export function SEO(props: SEOProps): ReactElement<SEOProps> {
   const siteAuthor = props.author || author;
   const siteImage = props.image || image;
   const siteKeywords = [...keywords, props.keywords].join(',');
+
   const metaData = [
     {
       name: 'canonical',
@@ -91,6 +94,7 @@ export function SEO(props: SEOProps): ReactElement<SEOProps> {
       href: 'icons/apple-touch-icon.png',
     },
   ];
+
   return (
     <Helmet
       htmlAttributes={{ lang: 'en' }}

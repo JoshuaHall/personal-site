@@ -1,6 +1,8 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
+import type { ReactElement } from 'react';
+
 import { Link } from 'gatsby';
-import { ChildrenProps } from '../childrenProps';
+import type { ChildrenProps } from '../childrenProps';
 
 interface TagsHeaderColumnProps {
   title: string;
