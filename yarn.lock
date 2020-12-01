@@ -2031,10 +2031,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@octokit/graphql-schema@^10.3.1":
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/@octokit/graphql-schema/-/graphql-schema-10.3.1.tgz#e08de4c4625c176b0a193c31bd29e599c6549c85"
-  integrity sha512-eDfINyhbXJL6npPw7tNV0GyOuFHM8+ZoyYTYEvPu+WbMz9SjDUgC5URodKBJs88dSnGGpx5yVcoz+2QPrSmSxg==
+"@octokit/graphql-schema@^10.9.0":
+  version "10.9.0"
+  resolved "https://registry.yarnpkg.com/@octokit/graphql-schema/-/graphql-schema-10.9.0.tgz#e121b223d4e8a3800e767c701ee9b9924e1c95bc"
+  integrity sha512-2tIj2ow3KirX50qxr58SB22d+OK904xu3K3qGrYBFIpQGEy6kqnzj4sg74yXE4+g1s670t2uKQoZ/EY1kfEvFw==
 
 "@pieh/friendly-errors-webpack-plugin@1.7.0-chalk-2":
   version "1.7.0-chalk-2"
