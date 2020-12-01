@@ -1514,10 +1514,10 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-fa-solid/-/icons-fa-solid-1.0.13.tgz#4daeac41efb3a628c868ecd040b51f8282b2a63f"
   integrity sha512-DrR3ULfX+1M8wljB/djsFRviqkrjeMH7XqdzEwe+hBjpVK+Pri7AFyuScxAYlQyx0VmOpyGC44hIehykvgt6AQ==
 
-"@iconify/icons-ic@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.16.tgz#d1b4ceed06b4a842b6e7dd99a750518da58a2627"
-  integrity sha512-K0VPcIxYpSxujgXKsJe0rrpUG1fE5+02vI3qUNBMVuQn9dJYRoAO4X9qmRidHA9bz3oFd9Qr8Co6ytuCaaYYEw==
+"@iconify/icons-ic@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.1.0.tgz#3a02e7bf823c1a9ce3539dbe1646ab47f4f6768d"
+  integrity sha512-PyR3EOJOwWLTxA36AVi+r0u3eJC68KA38gsPYX3ZbyiD6fvnIwQFFcfNLoslOOBCPixWqPmjLXe0l1lLSTPc3A==
 
 "@iconify/icons-logos@^1.0.12":
   version "1.0.12"
