@@ -1499,10 +1499,10 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@iconify/icons-clarity@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-clarity/-/icons-clarity-1.0.0.tgz#f38d4dd250e2aebd1f790b185c246f8c69b20a3b"
-  integrity sha512-o52uq5WAtWGN1RaAIQhlIjxfHwRISq9Qm+X7Xi/13LeSQ5sZB15jUeLJepRw5EWfEn1moS2CLcrhSYVMp+xFCA==
+"@iconify/icons-clarity@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-clarity/-/icons-clarity-1.1.0.tgz#72834d2366cf6be22c5516fafe5710b96aeed916"
+  integrity sha512-k++l+TvTu4i7D0lJRHztzVghqeSK4cEsoRdNljQGbOmLXkNhLxUynC+HdqTSPekTS1JtucRoFjHan06U+goGsA==
 
 "@iconify/icons-fa-brands@^1.0.16":
   version "1.0.16"
