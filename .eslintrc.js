@@ -1,9 +1,9 @@
 module.exports = {
   parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
-    ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
+    ecmaVersion: 2020,
 
-    sourceType: 'module', // Allows for the use of imports
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true, // Allows for the parsing of JSX
     },
@@ -23,7 +23,6 @@ module.exports = {
   plugins: ['react-hooks', 'jsx-a11y'],
   ignorePatterns: ['public/', 'quickfrac/'],
   rules: {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
