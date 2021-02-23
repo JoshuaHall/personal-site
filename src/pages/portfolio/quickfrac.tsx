@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 
 import { graphql } from 'gatsby';
 
-import { ElmHandler } from '../../components/ElmHandler';
+import { ElmApp, ElmHandler } from '../../components/ElmHandler';
 
 // Includes elm-canvas for use with elm-canvas and quickfrac
 import 'elm-canvas';
@@ -17,8 +17,7 @@ import { PortfolioPageLayout } from '../../components/PortfolioPageLayout';
 import { Elm } from '../../../quickfrac/src/Main.elm';
 
 export default function QuickfracPage({ data }: PortfolioLinkPageProps): ReactElement<PortfolioLinkPageProps> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function addPorts(appPorts: any): void {
+  function addPorts(appPorts: ElmApp): void {
     appPorts.clearCanvas.subscribe(() => {
       const scratchpad = document.querySelector('canvas') as HTMLCanvasElement;
 

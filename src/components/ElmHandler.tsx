@@ -4,12 +4,21 @@ interface InitOptions {
   node: HTMLElement | null;
 }
 
+interface ElmAppPorts {
+  ports: ElmApp;
+}
+
+export interface ElmApp {
+  clearCanvas: {
+    subscribe: (subscribeFunc: () => void) => void;
+  };
+}
+
 interface ElmHandlerProps {
   src: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    init: (opts: InitOptions) => any;
+    init: (opts: InitOptions) => ElmAppPorts;
   };
-  ports?: (appPorts: unknown) => void;
+  ports?: (appPorts: ElmApp) => void;
 }
 
 export const ElmHandler = React.memo(
@@ -17,7 +26,6 @@ export const ElmHandler = React.memo(
     const node = useRef(null);
 
     useEffect(() => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const app = src.init({
         node: node.current,
       });
