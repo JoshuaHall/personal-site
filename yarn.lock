@@ -4390,12 +4390,7 @@ bulma@^0.8.2:
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.2.tgz#5d928f16ed4a84549c2873f95c92c38c69c631a7"
   integrity sha512-vMM/ijYSxX+Sm+nD7Lmc1UgWDy2JcL2nTKqwgEqXuOMU+IGALbXd5MLt/BcjBAPLIx36TtzhzBcSnOP974gcqA==
 
-bulma@^0.9.0:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.9.1.tgz#2bf0e25062a22166db5c92e8c3dcb4605ab040d8"
-  integrity sha512-LSF69OumXg2HSKl2+rN0/OEXJy7WFEb681wtBlNS/ulJYR27J3rORHibdXZ6GVb/vyUzzYK/Arjyh56wjbFedA==
-
-bulma@^0.9.2:
+bulma@^0.9.0, bulma@^0.9.2:
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.9.2.tgz#340011e119c605f19b8ca886bfea595f1deaf23c"
   integrity sha512-e14EF+3VSZ488yL/lJH0tR8mFWiEQVCMi/BQUMi2TGMBOk+zrDg4wryuwm/+dRSHJw0gMawp2tsW7X1JYUCE3A==
@@ -8178,12 +8173,13 @@ functional-red-black-tree@^1.0.1:
 
 "game-of-life@https://github.com/JoshuaHall/game-of-life":
   version "0.1.0"
-  resolved "https://github.com/JoshuaHall/game-of-life#cddef9fd288594d4268f4b65749b648137d9fef6"
+  uid "374b2f68070f81af1561d02c5e722cba5a5fa22a"
+  resolved "https://github.com/JoshuaHall/game-of-life#374b2f68070f81af1561d02c5e722cba5a5fa22a"
   dependencies:
-    bulma "^0.8.2"
-    bulma-slider "^2.0.0"
-    react "^16.13.1"
-    react-dom "^16.13.1"
+    bulma "^0.9.2"
+    bulma-slider "^2.0.4"
+    react "^17.0.1"
+    react-dom "^17.0.1"
 
 gatsby-cli@^2.19.1:
   version "2.19.1"
