@@ -20,14 +20,9 @@ The `a` in `Maybe a` represents a type parameter/generic parameter. It is used i
 But how do you work with a `Maybe`? Good question. For example, you can use a `case` statement in Elm, which forces you to check if your `Maybe a` value is `Nothing` instead of `Just`. This eliminates a huge class of bugs (As a C# programmer, I don't miss `NullReferenceException`s). Here's an example:
 
 ```elm
-userMessage : Maybe String
-userMessage =
-    Nothing
-
-
-validationMessage : String
-validationMessage =
-    case userMessage of
+validateMessage : Maybe String -> String
+validateMessage maybeMessage =
+    case maybeMessage of
         Just message ->
             "You put in: " ++ message
 
