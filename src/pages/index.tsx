@@ -1,28 +1,18 @@
 import React from 'react';
 import type { ReactElement } from 'react';
 
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import type { FluidObject } from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import { Layout } from '../components/Layout';
 
-type GatsbyImageType = FluidObject | FluidObject[];
+const imageWidth = 648;
+const imageHeight = 615;
 
-interface GatsbyChildImageSharp {
-  childImageSharp: {
-    fluid: GatsbyImageType;
-  };
+function EagerStaticIndexImage(props: { src: string; alt: string }): ReactElement {
+  return <StaticImage src={props.src} alt={props.alt} loading="eager" width={imageWidth} height={imageHeight} />;
 }
 
-interface IndexPageProps {
-  data: {
-    portrait: GatsbyChildImageSharp;
-    climbing: GatsbyChildImageSharp;
-  };
-}
-
-export default function Index({ data }: IndexPageProps): ReactElement<IndexPageProps> {
+export default function Index(): ReactElement {
   return (
     <Layout title="Home" description="Home page of joshuahall.dev">
       <section className="hero is-medium is-secondary">
@@ -32,13 +22,13 @@ export default function Index({ data }: IndexPageProps): ReactElement<IndexPageP
             <h2 className="subtitle">I like to program, game, climb, and a bunch of other things.</h2>
             <div className="columns is-centered">
               <div className="column">
-                <Img
-                  fluid={data.portrait.childImageSharp.fluid}
+                <EagerStaticIndexImage
+                  src="../images/BridgePhoto.png"
                   alt="Photo of Joshua Hall (me) smiling at the camera"
                 />
               </div>
               <div className="column">
-                <Img fluid={data.climbing.childImageSharp.fluid} alt="Photo of Joshua Hall (me) rock climbing" />
+                <EagerStaticIndexImage src="../images/Climbing.png" alt="Photo of Joshua Hall (me) rock climbing" />
               </div>
             </div>
           </div>
@@ -47,24 +37,3 @@ export default function Index({ data }: IndexPageProps): ReactElement<IndexPageP
     </Layout>
   );
 }
-
-export const query = graphql`
-  fragment defaultImage on File {
-    childImageSharp {
-      fluid(maxWidth: 648, maxHeight: 615, quality: 100) {
-        ...GatsbyImageSharpFluid
-        ...GatsbyImageSharpFluidLimitPresentationSize
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-
-  query {
-    portrait: file(relativePath: { eq: "BridgePhoto.png" }) {
-      ...defaultImage
-    }
-    climbing: file(relativePath: { eq: "Climbing.png" }) {
-      ...defaultImage
-    }
-  }
-`;

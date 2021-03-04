@@ -44,9 +44,7 @@ module.exports = {
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         },
-        createSchema: async () => {
-          return buildClientSchema(schema.json);
-        },
+        createSchema: async () => buildClientSchema(schema.json),
       },
     },
     {
@@ -115,8 +113,9 @@ module.exports = {
         cwd: __dirname + '/quickfrac',
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
