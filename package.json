@@ -86,7 +86,7 @@
     "gatsby": "3.0.1",
     "gatsby-cli": "3.0.0",
     "gatsby-codemods": "2.0.0",
-    "gatsby-image": "3.0.0",
+    "gatsby-image": "3.2.0",
     "gatsby-plugin-elm": "git+https://github.com/JoshuaHall/gatsby-plugin-elm.git",
     "gatsby-plugin-eslint": "3.0.0",
     "gatsby-plugin-image": "1.0.0",
