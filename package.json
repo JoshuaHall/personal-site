@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@iconify/types": "1.0.6",
-    "@octokit/graphql-schema": "10.29.0",
+    "@octokit/graphql-schema": "10.42.0",
     "@types/dompurify": "2.2.1",
     "@types/marked": "1.2.2",
     "@types/react": "17.0.2",
