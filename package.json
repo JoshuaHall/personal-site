@@ -49,7 +49,7 @@
     "lodash": "4.17.21",
     "markdown-previewer": "https://github.com/JoshuaHall/markdown-previewer",
     "pomodoro-clock": "https://github.com/JoshuaHall/pomodoro-clock",
-    "postcss": "8.2.7",
+    "postcss": "8.3.0",
     "prismjs": "1.23.0",
     "quote-box": "https://github.com/JoshuaHall/quote-box",
     "react": "17.0.1",
